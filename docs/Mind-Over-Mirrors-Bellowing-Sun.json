@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "type": "Image",
+      "id": "Mind-Over-Mirrors-Bellowing-Sun",
+      "attributes": {
+        "title": "Mind Over Mirrors: Jaime Fennelly with Jon Mueller, Janet Beveridge Bean, and Jim Becker",
+        "type": "Image",
+        "source_uri": "http://mcachicago.org/Calendar/2018/04/Mind-Over-Mirrors-Bellowing-Sun",
+        "canonical_id": "58efa97b0efa0d55390000a8",
+        "context": "Events ",
+        "created_at": "04/13/2017 16:38:19",
+        "updated_at": "06/16/2017 19:38:02"
+      },
+      "links": {
+        "self": "http://coyote.data/Mind-Over-Mirrors-Bellowing-Sun.json"
+      },
+      "relationships": {
+        "predicates": {
+        },
+        "representations": {
+          "links": {
+            "self": "http://coyote.data/Mind-Over-Mirrors-Bellowing-Sun/relationships/representations",
+            "related": "http://coyote.data/Mind-Over-Mirrors-Bellowing-Sun/representations"
+          },
+          "data": [
+            {
+              "type": "Representation",
+              "id": "4948"
+            },
+            {
+              "type": "Representation",
+              "id": "4947"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "included": [
+    {
+      "type": "Representation",
+      "id": "4948",
+      "attributes": {
+        "text": "Three men and one woman stand on a beach on a sunny day wearing heavy parkas.",
+        "metum": "Alt",
+        "status": "Approved",
+        "author": "Matti Allison (hotmail)",
+        "license": "cc0-1.0",
+        "content_type": "text/plain",
+        "language": "en",
+        "content_uri": ""
+      },
+      "links": {
+        "self": "http://coyote.data/representations/4948"
+      }
+    },
+    {
+      "type": "Representation",
+      "id": "4947",
+      "attributes": {
+        "text": "Four people are standing on a beach.  The strong light from behind the figures is casting long shadows before them onto the sand.  Behind the standing people, the sandy beach terminates into a line of brush and beach grass about two thirds of the way up our field of vision.  The sky is pale blue in contrast to the people who are dresses mostly in dark clothing.  The casually dressed fair skinned people (three men and one woman) are wearing winter gear, suggesting that despite the beach location the temperature is cold.",
+        "metum": "Long",
+        "status": "Approved",
+        "author": "Matti Allison (hotmail)",
+        "license": "cc0-1.0",
+        "content_type": "text/plain",
+        "language": "en",
+        "content_uri": ""
+      },
+      "links": {
+        "self": "http://coyote.data/representations/4947"
+      }
+    }
+  ]
+}

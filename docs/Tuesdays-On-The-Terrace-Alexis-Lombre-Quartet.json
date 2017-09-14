@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "type": "Image",
+      "id": "Tuesdays-On-The-Terrace-Alexis-Lombre-Quartet",
+      "attributes": {
+        "title": "Alexis Lombre",
+        "type": "Image",
+        "source_uri": "http://mcachicago.org/Calendar/2017/06/Tuesdays-On-The-Terrace-Alexis-Lombre-Quartet",
+        "canonical_id": "58fa5a560efa0d4d550003af",
+        "context": "Events ",
+        "created_at": "04/21/2017 19:15:34",
+        "updated_at": "08/03/2017 17:04:36.869826"
+      },
+      "links": {
+        "self": "http://coyote.data/Tuesdays-On-The-Terrace-Alexis-Lombre-Quartet.json"
+      },
+      "relationships": {
+        "predicates": {
+        },
+        "representations": {
+          "links": {
+            "self": "http://coyote.data/Tuesdays-On-The-Terrace-Alexis-Lombre-Quartet/relationships/representations",
+            "related": "http://coyote.data/Tuesdays-On-The-Terrace-Alexis-Lombre-Quartet/representations"
+          },
+          "data": [
+            {
+              "type": "Representation",
+              "id": "5135"
+            },
+            {
+              "type": "Representation",
+              "id": "5142"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "included": [
+    {
+      "type": "Representation",
+      "id": "5135",
+      "attributes": {
+        "text": "A woman sits on a bench in front of a piano in a dimly lit club with dark curtains. Her right arm rests in her lap and her left hand scratches the top of her head. She tilts her head to the left and smiles. Photographs of other musicians cover the back walls. ",
+        "metum": "Long",
+        "status": "Approved",
+        "author": "Meghan  Coppoletti",
+        "license": "cc0-1.0",
+        "content_type": "text/plain",
+        "language": "en",
+        "content_uri": ""
+      },
+      "links": {
+        "self": "http://coyote.data/representations/5135"
+      }
+    },
+    {
+      "type": "Representation",
+      "id": "5142",
+      "attributes": {
+        "text": "A woman sits at a piano in a dimly lit club. She tilts her head to the left and smiles. ",
+        "metum": "Alt",
+        "status": "Approved",
+        "author": "Lisa Meyerowitz",
+        "license": "cc0-1.0",
+        "content_type": "text/plain",
+        "language": "en",
+        "content_uri": ""
+      },
+      "links": {
+        "self": "http://coyote.data/representations/5142"
+      }
+    }
+  ]
+}

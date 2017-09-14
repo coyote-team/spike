@@ -9,31 +9,57 @@ require 'uri'
 require 'bundler/setup'
 require 'active_support/core_ext/string/inflections'
 require 'active_support/core_ext/object/blank'
+require 'active_support/core_ext/hash/except'
 
 ROOT_PATH = Pathname(__dir__).parent
 DATA_PATH = ROOT_PATH.join('data').join('coyote_images.json')
-OUTPUT_PATH = ROOT_PATH.join('doc').tap(&:mkpath)
+OUTPUT_PATH = ROOT_PATH.join('docs').tap(&:mkpath)
 
 APPROVED = 'Approved'.freeze
 TEXT_CONTENT_TYPE = 'text/plain'.freeze
 
-BASE_URI = URI('http://coyote.data')
+BASE_URI = Pathname('http://coyote.data')
 
-# NOTE: 
-# representations don't link to sibling representations. Did not include tags which would be Subject
-#Add some fake resources that link to each other part/whole/etc., then emit those as a different set of output [so not mixed with rest of coyote data]
+# next step is make a hypermedia JSON version that has language translation and audio transcription
+# be sure to link to siblings
 
-HAS_PART = ['DC.Relation.HasPart'.freeze,'DC.Relation.IsPartOf'.freeze].freeze
+# /empire_state_building/ gives you basic attributes and relationships to collections; stuff like source URI would be an attribute
+# /empire_state_building/relationships/representations would let you add stuff to the representations
+# /empire_state_building/representations/123 would be a particular JSON representation of ESB
+# /empire_state_building/representations/123.en.html
+# /empire_state_building/representations/123.en.text
+# /empire_state_building/representations/123.es.html
+# /empire_state_building/representations/123.es.html
 
-class Link < Struct.new(:subject,:predicate,:object)
+# Each representation and each resource would represent predicates as collections also, thus:
+# /empire_state_building/hasParts/ would return a collection of items that are part of ESB
+# /empire_state_building/relationships/hasParts would let you manipulate the parts
+# /empire_state_building/isPartOf/
+# /empire_state_building/representations/123/isFormatOf
+# /empire_state_building/representations/123/isVersionOf
+# /picture_of_empire_state_building/representations/123/isFormatOf
+
+HAS_PART = ['hasPart'.freeze,'isPartOf'.freeze].freeze
+
+class Predicate < Struct.new(:identifier,:subject,:verb,:object)
+  def attributes
+    { subject: subject.uri,
+      verb: verb,
+      object: object.uri }
+  end
+
+  def uri
+    BASE_URI.join('predicates',identifier.to_s)
+  end
 end
 
-class Resource < Struct.new(:identifier,:canonical_id,:source_uri,:title,:context,:created_at,:updated_at,:representations,:links)
+class Resource < Struct.new(:identifier,:type,:canonical_id,:source_uri,:title,:context,:created_at,:updated_at,:representations,:links)
   def initialize(rec)
+    self.title = rec[:title].presence || identifier.humanize
+    self.type = rec.fetch(:type,'Image')
     self.source_uri = rec.fetch(:source_uri)
-    self.identifier = URI(source_uri).path.split(%r{/}).last.to_s
+    self.identifier = rec[:identifier].presence || URI(source_uri).path.split(%r{/}).last.to_s
     self.canonical_id = rec.fetch(:canonical_id)
-    self.title = rec[:image_title].presence || identifier.humanize
     self.context = rec.fetch(:context)
     self.created_at = rec.fetch(:created_at)
     self.updated_at = rec.fetch(:updated_at)
@@ -41,18 +67,25 @@ class Resource < Struct.new(:identifier,:canonical_id,:source_uri,:title,:contex
     self.links = []
   end
 
+  def attributes
+    { title: title, type: type, source_uri: source_uri, canonical_id: canonical_id, context: context, created_at: created_at, updated_at: updated_at }
+  end
+  def uri
+    BASE_URI.join(identifier)
+  end
+
   def <<(representation)
     representations << representation
   end
   
-  def link(predicate,resource)
-    links << Link.new(self,predicate,resource)
+  def link(identifier,verb,resource)
+    links << Predicate.new(identifier,self,verb,resource)
   end
 end
 
-class Representation < Struct.new(:id,:text,:metum,:status,:author,:license,:content_type,:language,:content_uri)
+class Representation < Struct.new(:identifier,:text,:metum,:status,:author,:license,:content_type,:language,:content_uri)
   def initialize(rec)
-    self.id = rec.fetch(:description_id)
+    self.identifier = rec.fetch(:description_id)
     self.text = rec.fetch(:description_text)
     self.metum = rec.fetch(:metum)
     self.status = APPROVED
@@ -61,6 +94,21 @@ class Representation < Struct.new(:id,:text,:metum,:status,:author,:license,:con
     self.content_type = rec.fetch(:content_type,TEXT_CONTENT_TYPE)
     self.language = rec.fetch(:description_locale,'en')
     self.content_uri = rec.fetch(:content_uri,'')
+  end
+
+  def attributes
+    { text: text,
+      metum: metum,
+      status: status,
+      author: author,
+      license: license,
+      content_type: content_type,
+      language: language,
+      content_uri: content_uri }
+  end
+
+  def uri
+    BASE_URI.join('representations',identifier)
   end
 end
 
@@ -71,7 +119,10 @@ def import
   data.fetch(:RECORDS).map do |rec|
     url = rec.delete(:old_page_urls).to_s
     url.gsub!(/[{}]/,'')
-    rec.merge!(:source_uri => url)
+    rec.merge!({
+      source_uri: url,
+      title: rec.delete(:image_title)
+    })
   end
 end
 
@@ -257,18 +308,24 @@ def write_html(resources)
   end
 end
 
+@counter = 1
+
 def link(subject,predicate,object)
   forward = predicate.first
   reverse = predicate.last
-  subject.link(forward,object)
-  object.link(reverse,subject)
+
+  subject.link(@counter,forward,object)
+  @counter += 1
+  object.link(@counter,reverse,subject)
+  @counter += 1
 end
 
 records = import().last(10)
 resources = materialize(records)
 
 picture_of_empire_state_building = Resource.new({
-  image_title: 'Picture of Empire State Building',
+  title: 'Picture of Empire State Building',
+  identifier: 'brs_0330',
   source_uri: 'http://www.esbnyc.com/sites/default/files/styles/module_image__600x338_/public/default_images/brs_0330.jpg?itok=PrpAgC4u',
   canonical_id: 'PrpAgC4u',
   context: 'Website',
@@ -286,8 +343,9 @@ picture_of_empire_state_building.representations << Representation.new({
 })
 
 empire_state_building = Resource.new({
-  image_title: 'Empire State Building', # TODO fix this so it can just be 'title'
-  identifier: 'http://www.esbnyc.com/',
+  title: 'Empire State Building',
+  type: 'PhysicalObject',
+  identifier: 'www.esbnyc.com',
   source_uri: 'http://www.esbnyc.com/',
   canonical_id: 'http://www.esbnyc.com/',
   context: 'Place',
@@ -309,4 +367,87 @@ link(picture_of_empire_state_building,HAS_PART,empire_state_building)
 resources << empire_state_building
 resources << picture_of_empire_state_building
 
-write_html(resources)
+#write_html(resources)
+
+
+def make_api_obj(resource)
+  resource_links = {
+    self: BASE_URI.join("#{resource.identifier}.json")
+  }
+
+  predicates = {}
+
+  if resource.links.any?
+    predicate_data = resource.links.map do |l|
+      { type: 'Predicate', id: l.identifier }
+    end
+
+    predicates = {
+      links: BASE_URI.join(resource.identifier,'relationships','predicates'),
+      related: BASE_URI.join(resource.identifier,'predicates'),
+      data: predicate_data
+    }
+  end
+
+  representation_data = resource.representations.map do |r|
+    { type: 'Representation', id: r.identifier }
+  end
+
+  representations = {
+    links: {
+      self: BASE_URI.join(resource.identifier,'relationships','representations'),
+      related: BASE_URI.join(resource.identifier,'representations')
+    },
+    data: representation_data
+  }
+
+  relationships = {
+    predicates: predicates,
+    representations: representations
+  }
+
+  included = []
+
+  resource.representations.each do |r|
+    included << {
+      type: 'Representation',
+      id: r.identifier,
+      attributes: r.attributes,
+      links: {
+        self: r.uri
+      }
+    }
+  end
+
+  resource.links.each do |p|
+    included << {
+      type: 'Predicate',
+      id: p.identifier,
+      attributes: p.attributes,
+      links: {
+        self: p.uri
+      }
+    }
+  end
+
+  data = {
+    type: resource.type,
+    id: resource.identifier,
+    attributes: resource.attributes,
+    links: resource_links,
+    relationships: relationships
+  }
+
+  { data: [data],
+    included: included }
+end
+
+resources.each do |resource|
+  api_obj = make_api_obj(resource)
+
+  path = OUTPUT_PATH.join("#{resource.identifier}.json")
+
+  path.open('w') do |io|
+    io << JSON.pretty_generate(api_obj)
+  end
+end

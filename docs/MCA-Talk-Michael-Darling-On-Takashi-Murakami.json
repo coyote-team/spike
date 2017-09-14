@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "type": "Image",
+      "id": "MCA-Talk-Michael-Darling-On-Takashi-Murakami",
+      "attributes": {
+        "title": "Michael Darling",
+        "type": "Image",
+        "source_uri": "http://mcachicago.org/Calendar/2017/06/MCA-Talk-Michael-Darling-On-Takashi-Murakami",
+        "canonical_id": "59024b303ac8f807570000f9",
+        "context": "Events ",
+        "created_at": "04/27/2017 19:49:04",
+        "updated_at": "05/05/2017 20:25:50"
+      },
+      "links": {
+        "self": "http://coyote.data/MCA-Talk-Michael-Darling-On-Takashi-Murakami.json"
+      },
+      "relationships": {
+        "predicates": {
+        },
+        "representations": {
+          "links": {
+            "self": "http://coyote.data/MCA-Talk-Michael-Darling-On-Takashi-Murakami/relationships/representations",
+            "related": "http://coyote.data/MCA-Talk-Michael-Darling-On-Takashi-Murakami/representations"
+          },
+          "data": [
+            {
+              "type": "Representation",
+              "id": "5124"
+            },
+            {
+              "type": "Representation",
+              "id": "5139"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "included": [
+    {
+      "type": "Representation",
+      "id": "5124",
+      "attributes": {
+        "text": "A mid-body shot of Chief Curator Michael Darling. He stands, posed, at a slight angle, and stares directly at the camera. He wears a white dress shirt, a blue and white checkered tie, and a textured, blue suit jacket. ",
+        "metum": "Long",
+        "status": "Approved",
+        "author": "Meghan  Coppoletti",
+        "license": "cc0-1.0",
+        "content_type": "text/plain",
+        "language": "en",
+        "content_uri": ""
+      },
+      "links": {
+        "self": "http://coyote.data/representations/5124"
+      }
+    },
+    {
+      "type": "Representation",
+      "id": "5139",
+      "attributes": {
+        "text": "A light-skinned man wearing a blue suit jacket, white shirt, and a blue-and-white checkered tie looks directly at the viewer.",
+        "metum": "Alt",
+        "status": "Approved",
+        "author": "Lisa Meyerowitz",
+        "license": "cc0-1.0",
+        "content_type": "text/plain",
+        "language": "en",
+        "content_uri": ""
+      },
+      "links": {
+        "self": "http://coyote.data/representations/5139"
+      }
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "type": "Image",
+      "id": "brs_0330",
+      "attributes": {
+        "title": "Picture of Empire State Building",
+        "type": "Image",
+        "source_uri": "http://www.esbnyc.com/sites/default/files/styles/module_image__600x338_/public/default_images/brs_0330.jpg?itok=PrpAgC4u",
+        "canonical_id": "PrpAgC4u",
+        "context": "Website",
+        "created_at": "2017-09-14",
+        "updated_at": "2017-09-14"
+      },
+      "links": {
+        "self": "http://coyote.data/brs_0330.json"
+      },
+      "relationships": {
+        "predicates": {
+          "links": "http://coyote.data/brs_0330/relationships/predicates",
+          "related": "http://coyote.data/brs_0330/predicates",
+          "data": [
+            {
+              "type": "Predicate",
+              "id": 1
+            }
+          ]
+        },
+        "representations": {
+          "links": {
+            "self": "http://coyote.data/brs_0330/relationships/representations",
+            "related": "http://coyote.data/brs_0330/representations"
+          },
+          "data": [
+            {
+              "type": "Representation",
+              "id": "1"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "included": [
+    {
+      "type": "Representation",
+      "id": "1",
+      "attributes": {
+        "text": "A tall building with upper floors lit up against a dusk background. The sky is deep blue, but the horizon is still dark orange, as though the sun had just set.",
+        "metum": "Alt",
+        "status": "Approved",
+        "author": "Mike Subelsky",
+        "license": "cc0-1.0",
+        "content_type": "text/plain",
+        "language": "en",
+        "content_uri": ""
+      },
+      "links": {
+        "self": "http://coyote.data/representations/1"
+      }
+    },
+    {
+      "type": "Predicate",
+      "id": 1,
+      "attributes": {
+        "subject": "http://coyote.data/brs_0330",
+        "verb": "hasPart",
+        "object": "http://coyote.data/www.esbnyc.com"
+      },
+      "links": {
+        "self": "http://coyote.data/predicates/1"
+      }
+    }
+  ]
+}

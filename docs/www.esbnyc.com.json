@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "type": "PhysicalObject",
+      "id": "www.esbnyc.com",
+      "attributes": {
+        "title": "Empire State Building",
+        "type": "PhysicalObject",
+        "source_uri": "http://www.esbnyc.com/",
+        "canonical_id": "http://www.esbnyc.com/",
+        "context": "Place",
+        "created_at": "2017-09-14",
+        "updated_at": "2017-09-14"
+      },
+      "links": {
+        "self": "http://coyote.data/www.esbnyc.com.json"
+      },
+      "relationships": {
+        "predicates": {
+          "links": "http://coyote.data/www.esbnyc.com/relationships/predicates",
+          "related": "http://coyote.data/www.esbnyc.com/predicates",
+          "data": [
+            {
+              "type": "Predicate",
+              "id": 2
+            }
+          ]
+        },
+        "representations": {
+          "links": {
+            "self": "http://coyote.data/www.esbnyc.com/relationships/representations",
+            "related": "http://coyote.data/www.esbnyc.com/representations"
+          },
+          "data": [
+            {
+              "type": "Representation",
+              "id": "2"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "included": [
+    {
+      "type": "Representation",
+      "id": "2",
+      "attributes": {
+        "text": "A large columnar building with many windows. The uppermost floors are narrower columns stacked on top of each other, in a tapering effect. The entire edifice is topped by a needle-like structure that projects into the air about 25% of the building height.",
+        "metum": "Alt",
+        "status": "Approved",
+        "author": "Mike Subelsky",
+        "license": "cc0-1.0",
+        "content_type": "text/plain",
+        "language": "en",
+        "content_uri": ""
+      },
+      "links": {
+        "self": "http://coyote.data/representations/2"
+      }
+    },
+    {
+      "type": "Predicate",
+      "id": 2,
+      "attributes": {
+        "subject": "http://coyote.data/www.esbnyc.com",
+        "verb": "isPartOf",
+        "object": "http://coyote.data/brs_0330"
+      },
+      "links": {
+        "self": "http://coyote.data/predicates/2"
+      }
+    }
+  ]
+}
