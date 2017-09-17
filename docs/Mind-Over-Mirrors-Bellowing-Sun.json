@@ -16,21 +16,43 @@
         "self": "http://coyote.data/Mind-Over-Mirrors-Bellowing-Sun.json"
       },
       "relationships": {
-        "predicates": {
-        },
-        "representations": {
+        "hasFormat": {
           "links": {
-            "self": "http://coyote.data/Mind-Over-Mirrors-Bellowing-Sun/relationships/representations",
-            "related": "http://coyote.data/Mind-Over-Mirrors-Bellowing-Sun/representations"
+            "self": "http://coyote.data/Mind-Over-Mirrors-Bellowing-Sun/relationships/hasFormat",
+            "related": "http://coyote.data/Mind-Over-Mirrors-Bellowing-Sun/hasFormat"
           },
           "data": [
             {
-              "type": "Representation",
-              "id": "4948"
+              "id": "4948",
+              "type": "Representation"
             },
             {
-              "type": "Representation",
-              "id": "4947"
+              "id": "4947",
+              "type": "Representation"
+            },
+            {
+              "id": "49480",
+              "type": "Representation"
+            },
+            {
+              "id": "49470",
+              "type": "Representation"
+            },
+            {
+              "id": "494800",
+              "type": "Representation"
+            },
+            {
+              "id": "494700",
+              "type": "Representation"
+            },
+            {
+              "id": "4948000",
+              "type": "Representation"
+            },
+            {
+              "id": "4947000",
+              "type": "Representation"
             }
           ]
         }
@@ -70,6 +92,108 @@
       },
       "links": {
         "self": "http://coyote.data/representations/4947"
+      }
+    },
+    {
+      "type": "Representation",
+      "id": "49480",
+      "attributes": {
+        "text": "Tres hombres y una mujer se colocan en una playa en un día asoleado que usa parkas pesados.",
+        "metum": "Alt",
+        "status": "Approved",
+        "author": "Matti Allison (hotmail)",
+        "license": "cc0-1.0",
+        "content_type": "text/plain",
+        "language": "es",
+        "content_uri": ""
+      },
+      "links": {
+        "self": "http://coyote.data/representations/49480"
+      }
+    },
+    {
+      "type": "Representation",
+      "id": "49470",
+      "attributes": {
+        "text": "Cuatro personas están de pie en una playa. La luz fuerte de detrás de las figuras está proyectando sombras largas antes de ellas en la arena. Detrás de la gente de pie, la playa arenosa termina en una línea de cepillo y hierba de la playa cerca de dos tercios del camino hasta nuestro campo de visión. El cielo es de color azul pálido en contraste con las personas que se visten principalmente con ropa oscura. Las personas casualmente vestidas de piel clara (tres hombres y una mujer) llevan equipo de invierno, lo que sugiere que a pesar de la ubicación de la playa la temperatura es fría.",
+        "metum": "Long",
+        "status": "Approved",
+        "author": "Matti Allison (hotmail)",
+        "license": "cc0-1.0",
+        "content_type": "text/plain",
+        "language": "es",
+        "content_uri": ""
+      },
+      "links": {
+        "self": "http://coyote.data/representations/49470"
+      }
+    },
+    {
+      "type": "Representation",
+      "id": "494800",
+      "attributes": {
+        "text": "",
+        "metum": "Alt",
+        "status": "Approved",
+        "author": "Matti Allison (hotmail)",
+        "license": "cc0-1.0",
+        "content_type": "audio/aiff",
+        "language": "en",
+        "content_uri": "4948.en.aiff"
+      },
+      "links": {
+        "self": "http://coyote.data/representations/494800"
+      }
+    },
+    {
+      "type": "Representation",
+      "id": "494700",
+      "attributes": {
+        "text": "",
+        "metum": "Long",
+        "status": "Approved",
+        "author": "Matti Allison (hotmail)",
+        "license": "cc0-1.0",
+        "content_type": "audio/aiff",
+        "language": "en",
+        "content_uri": "4947.en.aiff"
+      },
+      "links": {
+        "self": "http://coyote.data/representations/494700"
+      }
+    },
+    {
+      "type": "Representation",
+      "id": "4948000",
+      "attributes": {
+        "text": "",
+        "metum": "Alt",
+        "status": "Approved",
+        "author": "Matti Allison (hotmail)",
+        "license": "cc0-1.0",
+        "content_type": "audio/aiff",
+        "language": "es",
+        "content_uri": "49480.es.aiff"
+      },
+      "links": {
+        "self": "http://coyote.data/representations/4948000"
+      }
+    },
+    {
+      "type": "Representation",
+      "id": "4947000",
+      "attributes": {
+        "text": "",
+        "metum": "Long",
+        "status": "Approved",
+        "author": "Matti Allison (hotmail)",
+        "license": "cc0-1.0",
+        "content_type": "audio/aiff",
+        "language": "es",
+        "content_uri": "49470.es.aiff"
+      },
+      "links": {
+        "self": "http://coyote.data/representations/4947000"
       }
     }
   ]

@@ -16,21 +16,43 @@
         "self": "http://coyote.data/MCA-Talk-Michael-Darling-On-Takashi-Murakami.json"
       },
       "relationships": {
-        "predicates": {
-        },
-        "representations": {
+        "hasFormat": {
           "links": {
-            "self": "http://coyote.data/MCA-Talk-Michael-Darling-On-Takashi-Murakami/relationships/representations",
-            "related": "http://coyote.data/MCA-Talk-Michael-Darling-On-Takashi-Murakami/representations"
+            "self": "http://coyote.data/MCA-Talk-Michael-Darling-On-Takashi-Murakami/relationships/hasFormat",
+            "related": "http://coyote.data/MCA-Talk-Michael-Darling-On-Takashi-Murakami/hasFormat"
           },
           "data": [
             {
-              "type": "Representation",
-              "id": "5124"
+              "id": "5124",
+              "type": "Representation"
             },
             {
-              "type": "Representation",
-              "id": "5139"
+              "id": "5139",
+              "type": "Representation"
+            },
+            {
+              "id": "51240",
+              "type": "Representation"
+            },
+            {
+              "id": "51390",
+              "type": "Representation"
+            },
+            {
+              "id": "512400",
+              "type": "Representation"
+            },
+            {
+              "id": "513900",
+              "type": "Representation"
+            },
+            {
+              "id": "5124000",
+              "type": "Representation"
+            },
+            {
+              "id": "5139000",
+              "type": "Representation"
             }
           ]
         }
@@ -70,6 +92,108 @@
       },
       "links": {
         "self": "http://coyote.data/representations/5139"
+      }
+    },
+    {
+      "type": "Representation",
+      "id": "51240",
+      "attributes": {
+        "text": "Un tiro de cuerpo medio del curador jefe Michael Darling. Se pone de pie, posado, en un ligero ángulo, y mira directamente a la cámara. Lleva una camisa de vestir blanca, una corbata a cuadros azul y blanca y una chaqueta azul texturizada.",
+        "metum": "Long",
+        "status": "Approved",
+        "author": "Meghan  Coppoletti",
+        "license": "cc0-1.0",
+        "content_type": "text/plain",
+        "language": "es",
+        "content_uri": ""
+      },
+      "links": {
+        "self": "http://coyote.data/representations/51240"
+      }
+    },
+    {
+      "type": "Representation",
+      "id": "51390",
+      "attributes": {
+        "text": "Un hombre de piel clara que lleva una chaqueta de traje azul, camisa blanca y un lazo a cuadros azul y blanco mira directamente al espectador.",
+        "metum": "Alt",
+        "status": "Approved",
+        "author": "Lisa Meyerowitz",
+        "license": "cc0-1.0",
+        "content_type": "text/plain",
+        "language": "es",
+        "content_uri": ""
+      },
+      "links": {
+        "self": "http://coyote.data/representations/51390"
+      }
+    },
+    {
+      "type": "Representation",
+      "id": "512400",
+      "attributes": {
+        "text": "",
+        "metum": "Long",
+        "status": "Approved",
+        "author": "Meghan  Coppoletti",
+        "license": "cc0-1.0",
+        "content_type": "audio/aiff",
+        "language": "en",
+        "content_uri": "5124.en.aiff"
+      },
+      "links": {
+        "self": "http://coyote.data/representations/512400"
+      }
+    },
+    {
+      "type": "Representation",
+      "id": "513900",
+      "attributes": {
+        "text": "",
+        "metum": "Alt",
+        "status": "Approved",
+        "author": "Lisa Meyerowitz",
+        "license": "cc0-1.0",
+        "content_type": "audio/aiff",
+        "language": "en",
+        "content_uri": "5139.en.aiff"
+      },
+      "links": {
+        "self": "http://coyote.data/representations/513900"
+      }
+    },
+    {
+      "type": "Representation",
+      "id": "5124000",
+      "attributes": {
+        "text": "",
+        "metum": "Long",
+        "status": "Approved",
+        "author": "Meghan  Coppoletti",
+        "license": "cc0-1.0",
+        "content_type": "audio/aiff",
+        "language": "es",
+        "content_uri": "51240.es.aiff"
+      },
+      "links": {
+        "self": "http://coyote.data/representations/5124000"
+      }
+    },
+    {
+      "type": "Representation",
+      "id": "5139000",
+      "attributes": {
+        "text": "",
+        "metum": "Alt",
+        "status": "Approved",
+        "author": "Lisa Meyerowitz",
+        "license": "cc0-1.0",
+        "content_type": "audio/aiff",
+        "language": "es",
+        "content_uri": "51390.es.aiff"
+      },
+      "links": {
+        "self": "http://coyote.data/representations/5139000"
       }
     }
   ]

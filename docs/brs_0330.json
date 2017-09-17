@@ -16,25 +16,37 @@
         "self": "http://coyote.data/brs_0330.json"
       },
       "relationships": {
-        "predicates": {
-          "links": "http://coyote.data/brs_0330/relationships/predicates",
-          "related": "http://coyote.data/brs_0330/predicates",
-          "data": [
-            {
-              "type": "Predicate",
-              "id": 1
-            }
-          ]
-        },
-        "representations": {
+        "hasFormat": {
           "links": {
-            "self": "http://coyote.data/brs_0330/relationships/representations",
-            "related": "http://coyote.data/brs_0330/representations"
+            "self": "http://coyote.data/brs_0330/relationships/hasFormat",
+            "related": "http://coyote.data/brs_0330/hasFormat"
           },
           "data": [
             {
-              "type": "Representation",
-              "id": "1"
+              "id": "1",
+              "type": "Representation"
+            },
+            {
+              "id": "10",
+              "type": "Representation"
+            },
+            {
+              "id": "100",
+              "type": "Representation"
+            },
+            {
+              "id": "1000",
+              "type": "Representation"
+            }
+          ]
+        },
+        "hasPart": {
+          "links": "http://coyote.data/brs_0330/relationships/hasPart",
+          "related": "http://coyote.data/brs_0330/hasPart",
+          "data": [
+            {
+              "id": "www.esbnyc.com",
+              "type": "PhysicalObject"
             }
           ]
         }
@@ -60,15 +72,70 @@
       }
     },
     {
-      "type": "Predicate",
-      "id": 1,
+      "type": "Representation",
+      "id": "10",
       "attributes": {
-        "subject": "http://coyote.data/brs_0330",
-        "verb": "hasPart",
-        "object": "http://coyote.data/www.esbnyc.com"
+        "text": "Un edificio alto con los pisos superiores encendidos contra un fondo del crepúsculo. El cielo es azul profundo, pero el horizonte sigue siendo naranja oscuro, como si el sol acabara de ponerse.",
+        "metum": "Alt",
+        "status": "Approved",
+        "author": "Mike Subelsky",
+        "license": "cc0-1.0",
+        "content_type": "text/plain",
+        "language": "es",
+        "content_uri": ""
       },
       "links": {
-        "self": "http://coyote.data/predicates/1"
+        "self": "http://coyote.data/representations/10"
+      }
+    },
+    {
+      "type": "Representation",
+      "id": "100",
+      "attributes": {
+        "text": "",
+        "metum": "Alt",
+        "status": "Approved",
+        "author": "Mike Subelsky",
+        "license": "cc0-1.0",
+        "content_type": "audio/aiff",
+        "language": "en",
+        "content_uri": "1.en.aiff"
+      },
+      "links": {
+        "self": "http://coyote.data/representations/100"
+      }
+    },
+    {
+      "type": "Representation",
+      "id": "1000",
+      "attributes": {
+        "text": "",
+        "metum": "Alt",
+        "status": "Approved",
+        "author": "Mike Subelsky",
+        "license": "cc0-1.0",
+        "content_type": "audio/aiff",
+        "language": "es",
+        "content_uri": "10.es.aiff"
+      },
+      "links": {
+        "self": "http://coyote.data/representations/1000"
+      }
+    },
+    {
+      "type": "PhysicalObject",
+      "id": "www.esbnyc.com",
+      "attributes": {
+        "title": "Empire State Building",
+        "type": "PhysicalObject",
+        "source_uri": "http://www.esbnyc.com/",
+        "canonical_id": "http://www.esbnyc.com/",
+        "context": "Place",
+        "created_at": "2017-09-14",
+        "updated_at": "2017-09-14"
+      },
+      "links": {
+        "self": "http://coyote.data/www.esbnyc.com"
       }
     }
   ]

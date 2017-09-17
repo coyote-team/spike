@@ -10,6 +10,8 @@ require 'bundler/setup'
 require 'active_support/core_ext/string/inflections'
 require 'active_support/core_ext/object/blank'
 require 'active_support/core_ext/hash/except'
+require 'google/cloud/translate'
+
 
 ROOT_PATH = Pathname(__dir__).parent
 DATA_PATH = ROOT_PATH.join('data').join('coyote_images.json')
@@ -19,6 +21,13 @@ APPROVED = 'Approved'.freeze
 TEXT_CONTENT_TYPE = 'text/plain'.freeze
 
 BASE_URI = Pathname('http://coyote.data')
+
+LANGUAGES = %w(es) # zh).freeze
+
+VOICES = {
+  "en" => 'Samantha',
+  "es" => 'Paulina'
+}
 
 # next step is make a hypermedia JSON version that has language translation and audio transcription
 # be sure to link to siblings
@@ -40,6 +49,9 @@ BASE_URI = Pathname('http://coyote.data')
 # /picture_of_empire_state_building/representations/123/isFormatOf
 
 HAS_PART = ['hasPart'.freeze,'isPartOf'.freeze].freeze
+HAS_FORMAT = ['hasFormat'.freeze,'isFormatOf'.freeze].freeze
+IS_FORMAT = HAS_FORMAT.reverse
+IS_VERSION = ['isVersionOf'.freeze,'hasVersion'.freeze].freeze
 
 class Predicate < Struct.new(:identifier,:subject,:verb,:object)
   def attributes
@@ -70,6 +82,7 @@ class Resource < Struct.new(:identifier,:type,:canonical_id,:source_uri,:title,:
   def attributes
     { title: title, type: type, source_uri: source_uri, canonical_id: canonical_id, context: context, created_at: created_at, updated_at: updated_at }
   end
+
   def uri
     BASE_URI.join(identifier)
   end
@@ -83,10 +96,10 @@ class Resource < Struct.new(:identifier,:type,:canonical_id,:source_uri,:title,:
   end
 end
 
-class Representation < Struct.new(:identifier,:text,:metum,:status,:author,:license,:content_type,:language,:content_uri)
+class Representation < Struct.new(:identifier,:text,:metum,:status,:author,:license,:content_type,:language,:content_uri,:links)
   def initialize(rec)
     self.identifier = rec.fetch(:description_id)
-    self.text = rec.fetch(:description_text)
+    self.text = rec.fetch(:description_text,'')
     self.metum = rec.fetch(:metum)
     self.status = APPROVED
     self.author = rec.fetch(:author_name)
@@ -94,6 +107,7 @@ class Representation < Struct.new(:identifier,:text,:metum,:status,:author,:lice
     self.content_type = rec.fetch(:content_type,TEXT_CONTENT_TYPE)
     self.language = rec.fetch(:description_locale,'en')
     self.content_uri = rec.fetch(:content_uri,'')
+    self.links = []
   end
 
   def attributes
@@ -109,6 +123,10 @@ class Representation < Struct.new(:identifier,:text,:metum,:status,:author,:lice
 
   def uri
     BASE_URI.join('representations',identifier)
+  end
+
+  def link(identifier,verb,resource)
+    links << Predicate.new(identifier,self,verb,resource)
   end
 end
 
@@ -140,175 +158,7 @@ def materialize(records)
   resources.values
 end
 
-def write_html(resources)
-  collection_index_file = OUTPUT_PATH.join('index.html')
-
-  collection_links = []
-  collection_list_items = []
-
-  resources.each do |resource|
-    collection_path = OUTPUT_PATH.join(resource.identifier).tap(&:mkpath)
-    collection_file = collection_path.join('index.html')
-
-    representation_links = []
-    representation_list_items = []
-
-    # 1) Make resource files
-    resource.representations.each do |r|
-      representation_file = collection_path.join(r.metum,r.id,"#{r.language}.html")
-      representation_file.parent.mkpath
-
-      title = "#{r.metum} representation of Resource '#{resource.title}'"
-
-      identifier = "http://coyote.data/#{representation_file.relative_path_from(OUTPUT_PATH)}"
-
-      html = <<~HTML
-      <head profile="http://dublincore.org/documents/dcq-html/">
-        <title>#{title}</title>
-
-        <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" />
-        <link rel="schema.DCTERMS" href="http://purl.org/dc/terms/" />
-
-        <meta name="DC.Type"                      content="Collection" />
-        <meta name="DC.Identifier"                content="#{identifier}" />
-        <meta name="DC.Identifier"                content="mcachicago:#{resource.canonical_id}" />
-        <meta name="DC.Title"                     content="#{title}" />
-        <meta name="DC.Creator"                   content="#{r.author}" />
-        <meta name="DC.Format"                    content="text/html" />
-        <meta name="DC.Medium"                    content="#{resource.context}" />
-        <meta name="DC.Language"                  content="#{r.language}" />
-        <meta name="DC.Publisher"                 content="http://coyote.pics" />
-        <meta name="DC.Rights"                    content="#{r.license}" />
-        <meta name="DC.Date.Created"              content="#{resource.created_at}" />
-        <meta name="DC.Date.Updated"              content="#{resource.updated_at}" />
-
-        <link rel="DC.Relation.IsPartOf"    href="#{collection_file.relative_path_from(representation_file)}" />
-        <link rel="DC.Relation.IsVersionOf" href="#{resource.source_uri}" />
-        <link rel="DC.Relation.References"  href="#{resource.source_uri}" />
-
-        <!-- TODO: here is also where each representation would link to its sibling representations -->
-      </head>
-      <body>
-        <h1>#{title}</h1>
-        <hr/>
-
-        <p>
-          #{r.text}
-        </p>
-
-        <p>
-          <a href="#{collection_file.relative_path_from(collection_path)}" rel="DC.Relation.IsPartOf">Parent collection</a>
-        </p>
-      </body>
-      </html>
-      HTML
-
-      representation_file.open('w') do |io|
-        io.puts(html)
-      end
-
-      location = representation_file.relative_path_from(collection_path)
-
-      representation_links << %Q|<link rel="DC.Relation.HasPart" href="http://coyote.data/#{location}" />|
-      representation_list_items << %Q|<li><a href="#{location}" rel="DC.Relation.HasPart">#{r.metum} representation #{r.id}</a></li>|
-    end
-
-    # 2) Make collection file
-    
-    title = "Representations of Resource '#{resource.title}'"
-
-    related_resource_links = resource.links.map do |link|
-      %Q|<link rel="#{link.predicate}" href="#{link.object.identifier}" />|
-    end
-
-    related_resource_list_items = resource.links.map do |link|
-      %Q|<li><a href="#" rel="#{link.predicate}">#{link.object.title}</a></li>|
-    end
-
-    collection_file.open('w') do |io|
-      html = <<~HTML
-      <html>
-      <head profile="http://dublincore.org/documents/dcq-html/">
-        <title>#{title}</title>
-
-        <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" />
-        <link rel="schema.DCTERMS" href="http://purl.org/dc/terms/" />
-
-        <meta name="DC.Type"         content="Collection" />
-        <meta name="DC.ItemType"     content="Text" />
-        <meta name="DC.Identifier"   content="http://coyote.data/#{resource.identifier}" />
-        <meta name="DC.Title"        content="#{title}" />
-        <meta name="DC.Language"     content="en" />
-        <meta name="DC.Publisher"    content="http://coyote.pics" />
-        <meta name="DC.Date.Created" content="#{Date.today}" />
-
-        <link rel="DC.Relation.Source"  href="#{resource.source_uri}" />
-        #{representation_links.join("\n")}
-        #{related_resource_links.join("\n")}
-      </head>
-      </html>
-      <body>
-        <h1>#{title}</h1>
-        <ul>
-          #{representation_list_items.join("\n")}
-        </ul>
-
-        <h2>Related Resources</h2>
-        <ul>
-          #{related_resource_list_items.join("\n")}
-        </ul>
-        <p>
-          <a href="#{collection_index_file.relative_path_from(collection_path)}" rel="DC.Relation.IsPartOf">Coyoye Resoure Collection</a>
-        </p>
-      </body>
-      </html>
-      HTML
-
-      io << html
-    end
-
-    location = collection_file.relative_path_from(OUTPUT_PATH)
-    collection_links << %Q|<link rel="DC.Relation.HasPart" href="http://coyote.data/#{location}" />|
-    collection_list_items << %Q|<li><a href="./#{location}" rel="DC.Relation.HasPart">#{title}</a></li>|
-  end
-
-  # 3) Make overall index file
-  
-  collection_index_file.open('w') do |io|
-    io.puts '<html>'
-    html = <<~HTML
-    <head profile="http://dublincore.org/documents/dcq-html/">
-      <title>Coyote Representation Collection Example</title>
-
-      <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" />
-      <link rel="schema.DCTERMS" href="http://purl.org/dc/terms/" />
-
-      <!-- Dublin Core metadata for a collection: http://dublincore.org/groups/collections/collection-application-profile/#sencode -->
-      <meta name="DC.Type"         content="Collection" />
-      <meta name="DC.Identifier"   content="http://coyote.data/" />
-      <meta name="DC.Title"        content="All Coyote Resources" />
-      <meta name="DC.Collector"    content="MCA Chicago" />
-      <meta name="DC.Format"       content="text/html" />
-      <meta name="DC.Language"     content="en" />
-      <meta name="DC.Publisher"    content="http://coyote.pics" />
-      <meta name="DC.Date.Created" content="#{Date.today}" />
-      
-      #{collection_links.join("\n")}
-    </head>
-    <body>
-      <h1>Coyote Representation Collection Example</h1>
-      <ul>
-        #{collection_list_items.join("\n")}
-      </ul>
-    </body>
-    </html>
-    HTML
-
-    io.puts html
-  end
-end
-
-@counter = 1
+@counter = 1 # HACK
 
 def link(subject,predicate,object)
   forward = predicate.first
@@ -320,8 +170,76 @@ def link(subject,predicate,object)
   @counter += 1
 end
 
-records = import().last(10)
-resources = materialize(records)
+def make_api_obj(resource)
+  resource_links = {
+    self: BASE_URI.join("#{resource.identifier}.json")
+  }
+
+  relationships = { 
+    hasFormat: {
+      links: {
+        self: BASE_URI.join(resource.identifier,'relationships','hasFormat'),
+        related: BASE_URI.join(resource.identifier,'hasFormat'),
+      },
+      data: resource.representations.map { |r| { id: r.identifier, type: 'Representation' } }
+    }
+  }
+
+  resource.links.group_by(&:verb).each do |verb,predicates|
+    relationships[verb] = {
+      links: BASE_URI.join(resource.identifier,'relationships',verb),
+      related: BASE_URI.join(resource.identifier,verb),
+      data: predicates.map { |p| { id: p.object.identifier, type: p.object.type } }
+    }
+  end
+
+  included = []
+
+  resource.representations.each do |r|
+    included << {
+      type: 'Representation',
+      id: r.identifier,
+      attributes: r.attributes,
+      links: {
+        self: r.uri
+      }
+    }
+  end
+
+  resource.links.each do |p|
+    included << {
+      type: p.object.type,
+      id: p.object.identifier,
+      attributes: p.object.attributes,
+      links: {
+        self: p.object.uri
+      }
+    }
+  end
+
+  data = {
+    type: resource.type,
+    id: resource.identifier,
+    attributes: resource.attributes,
+    links: resource_links,
+    relationships: relationships
+  }
+
+  { data: [data],
+    included: included }
+end
+
+def write_json(resources)
+  resources.each do |resource|
+    api_obj = make_api_obj(resource)
+
+    path = OUTPUT_PATH.join("#{resource.identifier}.json")
+
+    path.open('w') do |io|
+      io << JSON.pretty_generate(api_obj)
+    end
+  end
+end
 
 picture_of_empire_state_building = Resource.new({
   title: 'Picture of Empire State Building',
@@ -335,7 +253,7 @@ picture_of_empire_state_building = Resource.new({
 
 picture_of_empire_state_building.representations << Representation.new({
   description_id: '1',
-  locale: 'en',
+  description_locale: 'en',
   description_text: 'A tall building with upper floors lit up against a dusk background. The sky is deep blue, but the horizon is still dark orange, as though the sun had just set.',
   metum: 'Alt',
   author_name: 'Mike Subelsky',
@@ -355,7 +273,7 @@ empire_state_building = Resource.new({
 
 empire_state_building.representations << Representation.new({
   description_id: '2',
-  locale: 'en',
+  description_locale: 'en',
   description_text: 'A large columnar building with many windows. The uppermost floors are narrower columns stacked on top of each other, in a tapering effect. The entire edifice is topped by a needle-like structure that projects into the air about 25% of the building height.',
   metum: 'Alt',
   author_name: 'Mike Subelsky',
@@ -364,90 +282,75 @@ empire_state_building.representations << Representation.new({
 
 link(picture_of_empire_state_building,HAS_PART,empire_state_building)
 
+def translate(resources)
+  translate = Google::Cloud::Translate.new(project: ENV.fetch('GOOGLE_TRANSLATE_PROJECT_NAME'))
+
+  resources.each do |resource|
+    LANGUAGES.each do |code|
+      new_representations = resource.representations.map do |english|
+        translation = translate.translate english.text, to: code
+
+        new_representation = Representation.new({
+          description_id: (english.identifier.to_i * 10).to_s,
+          description_locale: code,
+          description_text: translation.text,
+          metum: english.metum,
+          author_name: english.author,
+          license: english.license,
+          text: translation.text
+        })
+
+        puts code
+        puts translation.text
+        puts
+
+        link(new_representation,IS_VERSION,english)
+
+        new_representation
+      end
+
+      resource.representations.concat(new_representations.flatten)
+    end
+  end
+end
+
+def transcribe(resources)
+  resources.each do |resource|
+    new_reps = resource.representations.map do |r|
+      audio_file_name = "#{r.identifier}.#{r.language}.aiff"
+
+      voice = VOICES.fetch(r.language)
+      command = "say -o #{OUTPUT_PATH.join(audio_file_name)} -v #{voice} '#{r.text}'"
+
+      `#{command}`
+
+      audio_rep = Representation.new({
+        description_id: (r.identifier.to_i * 100).to_s,
+        description_locale: r.language,
+        content_type: 'audio/aiff',
+        metum: r.metum,
+        author_name: r.author,
+        license: r.license,
+        content_uri: audio_file_name
+      })
+
+      link(audio_rep,IS_FORMAT,r)
+
+      audio_rep
+    end
+
+    resource.representations.concat(new_reps)
+  end
+end
+
+
+records = import().last(10)
+resources = materialize(records)
+
 resources << empire_state_building
 resources << picture_of_empire_state_building
 
-#write_html(resources)
+translate(resources)
+transcribe(resources)
 
-
-def make_api_obj(resource)
-  resource_links = {
-    self: BASE_URI.join("#{resource.identifier}.json")
-  }
-
-  predicates = {}
-
-  if resource.links.any?
-    predicate_data = resource.links.map do |l|
-      { type: 'Predicate', id: l.identifier }
-    end
-
-    predicates = {
-      links: BASE_URI.join(resource.identifier,'relationships','predicates'),
-      related: BASE_URI.join(resource.identifier,'predicates'),
-      data: predicate_data
-    }
-  end
-
-  representation_data = resource.representations.map do |r|
-    { type: 'Representation', id: r.identifier }
-  end
-
-  representations = {
-    links: {
-      self: BASE_URI.join(resource.identifier,'relationships','representations'),
-      related: BASE_URI.join(resource.identifier,'representations')
-    },
-    data: representation_data
-  }
-
-  relationships = {
-    predicates: predicates,
-    representations: representations
-  }
-
-  included = []
-
-  resource.representations.each do |r|
-    included << {
-      type: 'Representation',
-      id: r.identifier,
-      attributes: r.attributes,
-      links: {
-        self: r.uri
-      }
-    }
-  end
-
-  resource.links.each do |p|
-    included << {
-      type: 'Predicate',
-      id: p.identifier,
-      attributes: p.attributes,
-      links: {
-        self: p.uri
-      }
-    }
-  end
-
-  data = {
-    type: resource.type,
-    id: resource.identifier,
-    attributes: resource.attributes,
-    links: resource_links,
-    relationships: relationships
-  }
-
-  { data: [data],
-    included: included }
-end
-
-resources.each do |resource|
-  api_obj = make_api_obj(resource)
-
-  path = OUTPUT_PATH.join("#{resource.identifier}.json")
-
-  path.open('w') do |io|
-    io << JSON.pretty_generate(api_obj)
-  end
-end
+write_json(resources)

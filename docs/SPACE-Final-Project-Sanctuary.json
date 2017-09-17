@@ -16,21 +16,43 @@
         "self": "http://coyote.data/SPACE-Final-Project-Sanctuary.json"
       },
       "relationships": {
-        "predicates": {
-        },
-        "representations": {
+        "hasFormat": {
           "links": {
-            "self": "http://coyote.data/SPACE-Final-Project-Sanctuary/relationships/representations",
-            "related": "http://coyote.data/SPACE-Final-Project-Sanctuary/representations"
+            "self": "http://coyote.data/SPACE-Final-Project-Sanctuary/relationships/hasFormat",
+            "related": "http://coyote.data/SPACE-Final-Project-Sanctuary/hasFormat"
           },
           "data": [
             {
-              "type": "Representation",
-              "id": "5132"
+              "id": "5132",
+              "type": "Representation"
             },
             {
-              "type": "Representation",
-              "id": "5140"
+              "id": "5140",
+              "type": "Representation"
+            },
+            {
+              "id": "51320",
+              "type": "Representation"
+            },
+            {
+              "id": "51400",
+              "type": "Representation"
+            },
+            {
+              "id": "513200",
+              "type": "Representation"
+            },
+            {
+              "id": "514000",
+              "type": "Representation"
+            },
+            {
+              "id": "5132000",
+              "type": "Representation"
+            },
+            {
+              "id": "5140000",
+              "type": "Representation"
             }
           ]
         }
@@ -70,6 +92,108 @@
       },
       "links": {
         "self": "http://coyote.data/representations/5140"
+      }
+    },
+    {
+      "type": "Representation",
+      "id": "51320",
+      "attributes": {
+        "text": "Un grupo de estudiantes de secundaria en pie en varias configuraciones fuera en un lote vacío. Un joven con gafas y una chaqueta apunta hacia la distancia con su brazo derecho completamente extendido. El fondo está escasamente poblado de árboles desnudos, farolas, líneas eléctricas y edificios comerciales.",
+        "metum": "Long",
+        "status": "Approved",
+        "author": "Meghan  Coppoletti",
+        "license": "cc0-1.0",
+        "content_type": "text/plain",
+        "language": "es",
+        "content_uri": ""
+      },
+      "links": {
+        "self": "http://coyote.data/representations/51320"
+      }
+    },
+    {
+      "type": "Representation",
+      "id": "51400",
+      "attributes": {
+        "text": "Un grupo de personas de pie alrededor de un lote vacío en un día gris y frío. Una figura en el centro apunta hacia la izquierda y varias personas miran en esa dirección.",
+        "metum": "Alt",
+        "status": "Approved",
+        "author": "Lisa Meyerowitz",
+        "license": "cc0-1.0",
+        "content_type": "text/plain",
+        "language": "es",
+        "content_uri": ""
+      },
+      "links": {
+        "self": "http://coyote.data/representations/51400"
+      }
+    },
+    {
+      "type": "Representation",
+      "id": "513200",
+      "attributes": {
+        "text": "",
+        "metum": "Long",
+        "status": "Approved",
+        "author": "Meghan  Coppoletti",
+        "license": "cc0-1.0",
+        "content_type": "audio/aiff",
+        "language": "en",
+        "content_uri": "5132.en.aiff"
+      },
+      "links": {
+        "self": "http://coyote.data/representations/513200"
+      }
+    },
+    {
+      "type": "Representation",
+      "id": "514000",
+      "attributes": {
+        "text": "",
+        "metum": "Alt",
+        "status": "Approved",
+        "author": "Lisa Meyerowitz",
+        "license": "cc0-1.0",
+        "content_type": "audio/aiff",
+        "language": "en",
+        "content_uri": "5140.en.aiff"
+      },
+      "links": {
+        "self": "http://coyote.data/representations/514000"
+      }
+    },
+    {
+      "type": "Representation",
+      "id": "5132000",
+      "attributes": {
+        "text": "",
+        "metum": "Long",
+        "status": "Approved",
+        "author": "Meghan  Coppoletti",
+        "license": "cc0-1.0",
+        "content_type": "audio/aiff",
+        "language": "es",
+        "content_uri": "51320.es.aiff"
+      },
+      "links": {
+        "self": "http://coyote.data/representations/5132000"
+      }
+    },
+    {
+      "type": "Representation",
+      "id": "5140000",
+      "attributes": {
+        "text": "",
+        "metum": "Alt",
+        "status": "Approved",
+        "author": "Lisa Meyerowitz",
+        "license": "cc0-1.0",
+        "content_type": "audio/aiff",
+        "language": "es",
+        "content_uri": "51400.es.aiff"
+      },
+      "links": {
+        "self": "http://coyote.data/representations/5140000"
       }
     }
   ]

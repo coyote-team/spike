@@ -16,21 +16,43 @@
         "self": "http://coyote.data/Tuesdays-On-The-Terrace-Alexis-Lombre-Quartet.json"
       },
       "relationships": {
-        "predicates": {
-        },
-        "representations": {
+        "hasFormat": {
           "links": {
-            "self": "http://coyote.data/Tuesdays-On-The-Terrace-Alexis-Lombre-Quartet/relationships/representations",
-            "related": "http://coyote.data/Tuesdays-On-The-Terrace-Alexis-Lombre-Quartet/representations"
+            "self": "http://coyote.data/Tuesdays-On-The-Terrace-Alexis-Lombre-Quartet/relationships/hasFormat",
+            "related": "http://coyote.data/Tuesdays-On-The-Terrace-Alexis-Lombre-Quartet/hasFormat"
           },
           "data": [
             {
-              "type": "Representation",
-              "id": "5135"
+              "id": "5135",
+              "type": "Representation"
             },
             {
-              "type": "Representation",
-              "id": "5142"
+              "id": "5142",
+              "type": "Representation"
+            },
+            {
+              "id": "51350",
+              "type": "Representation"
+            },
+            {
+              "id": "51420",
+              "type": "Representation"
+            },
+            {
+              "id": "513500",
+              "type": "Representation"
+            },
+            {
+              "id": "514200",
+              "type": "Representation"
+            },
+            {
+              "id": "5135000",
+              "type": "Representation"
+            },
+            {
+              "id": "5142000",
+              "type": "Representation"
             }
           ]
         }
@@ -70,6 +92,108 @@
       },
       "links": {
         "self": "http://coyote.data/representations/5142"
+      }
+    },
+    {
+      "type": "Representation",
+      "id": "51350",
+      "attributes": {
+        "text": "Una mujer se sienta en un banco delante de un piano en un club tenuemente iluminado con las cortinas oscuras. Su brazo derecho descansa en su regazo y su mano izquierda arañazos la parte superior de su cabeza. Ella inclina la cabeza hacia la izquierda y sonríe. Fotografías de otros músicos cubren las paredes traseras.",
+        "metum": "Long",
+        "status": "Approved",
+        "author": "Meghan  Coppoletti",
+        "license": "cc0-1.0",
+        "content_type": "text/plain",
+        "language": "es",
+        "content_uri": ""
+      },
+      "links": {
+        "self": "http://coyote.data/representations/51350"
+      }
+    },
+    {
+      "type": "Representation",
+      "id": "51420",
+      "attributes": {
+        "text": "Una mujer se sienta en un piano en un club tenuemente iluminado. Ella inclina la cabeza hacia la izquierda y sonríe.",
+        "metum": "Alt",
+        "status": "Approved",
+        "author": "Lisa Meyerowitz",
+        "license": "cc0-1.0",
+        "content_type": "text/plain",
+        "language": "es",
+        "content_uri": ""
+      },
+      "links": {
+        "self": "http://coyote.data/representations/51420"
+      }
+    },
+    {
+      "type": "Representation",
+      "id": "513500",
+      "attributes": {
+        "text": "",
+        "metum": "Long",
+        "status": "Approved",
+        "author": "Meghan  Coppoletti",
+        "license": "cc0-1.0",
+        "content_type": "audio/aiff",
+        "language": "en",
+        "content_uri": "5135.en.aiff"
+      },
+      "links": {
+        "self": "http://coyote.data/representations/513500"
+      }
+    },
+    {
+      "type": "Representation",
+      "id": "514200",
+      "attributes": {
+        "text": "",
+        "metum": "Alt",
+        "status": "Approved",
+        "author": "Lisa Meyerowitz",
+        "license": "cc0-1.0",
+        "content_type": "audio/aiff",
+        "language": "en",
+        "content_uri": "5142.en.aiff"
+      },
+      "links": {
+        "self": "http://coyote.data/representations/514200"
+      }
+    },
+    {
+      "type": "Representation",
+      "id": "5135000",
+      "attributes": {
+        "text": "",
+        "metum": "Long",
+        "status": "Approved",
+        "author": "Meghan  Coppoletti",
+        "license": "cc0-1.0",
+        "content_type": "audio/aiff",
+        "language": "es",
+        "content_uri": "51350.es.aiff"
+      },
+      "links": {
+        "self": "http://coyote.data/representations/5135000"
+      }
+    },
+    {
+      "type": "Representation",
+      "id": "5142000",
+      "attributes": {
+        "text": "",
+        "metum": "Alt",
+        "status": "Approved",
+        "author": "Lisa Meyerowitz",
+        "license": "cc0-1.0",
+        "content_type": "audio/aiff",
+        "language": "es",
+        "content_uri": "51420.es.aiff"
+      },
+      "links": {
+        "self": "http://coyote.data/representations/5142000"
       }
     }
   ]

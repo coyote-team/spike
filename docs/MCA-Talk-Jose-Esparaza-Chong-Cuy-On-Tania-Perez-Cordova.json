@@ -16,21 +16,43 @@
         "self": "http://coyote.data/MCA-Talk-Jose-Esparaza-Chong-Cuy-On-Tania-Perez-Cordova.json"
       },
       "relationships": {
-        "predicates": {
-        },
-        "representations": {
+        "hasFormat": {
           "links": {
-            "self": "http://coyote.data/MCA-Talk-Jose-Esparaza-Chong-Cuy-On-Tania-Perez-Cordova/relationships/representations",
-            "related": "http://coyote.data/MCA-Talk-Jose-Esparaza-Chong-Cuy-On-Tania-Perez-Cordova/representations"
+            "self": "http://coyote.data/MCA-Talk-Jose-Esparaza-Chong-Cuy-On-Tania-Perez-Cordova/relationships/hasFormat",
+            "related": "http://coyote.data/MCA-Talk-Jose-Esparaza-Chong-Cuy-On-Tania-Perez-Cordova/hasFormat"
           },
           "data": [
             {
-              "type": "Representation",
-              "id": "5126"
+              "id": "5126",
+              "type": "Representation"
             },
             {
-              "type": "Representation",
-              "id": "5138"
+              "id": "5138",
+              "type": "Representation"
+            },
+            {
+              "id": "51260",
+              "type": "Representation"
+            },
+            {
+              "id": "51380",
+              "type": "Representation"
+            },
+            {
+              "id": "512600",
+              "type": "Representation"
+            },
+            {
+              "id": "513800",
+              "type": "Representation"
+            },
+            {
+              "id": "5126000",
+              "type": "Representation"
+            },
+            {
+              "id": "5138000",
+              "type": "Representation"
             }
           ]
         }
@@ -70,6 +92,108 @@
       },
       "links": {
         "self": "http://coyote.data/representations/5138"
+      }
+    },
+    {
+      "type": "Representation",
+      "id": "51260",
+      "attributes": {
+        "text": "Una fotografía de cuerpo completo de un curador de MCA masculino. Se apoya contra una ventana, con las manos en el bolsillo y la pierna derecha casualmente cruzada sobre su izquierda. Lleva una camisa de vestir blanca con un azul marino, chaqueta de vestir y pantalones ajustados. Lleva gafas gruesas y enmarcadas y mira fijamente sin expresión a la cámara.",
+        "metum": "Long",
+        "status": "Approved",
+        "author": "Meghan  Coppoletti",
+        "license": "cc0-1.0",
+        "content_type": "text/plain",
+        "language": "es",
+        "content_uri": ""
+      },
+      "links": {
+        "self": "http://coyote.data/representations/51260"
+      }
+    },
+    {
+      "type": "Representation",
+      "id": "51380",
+      "attributes": {
+        "text": "Un hombre vestido con un traje azul crujiente y camisa blanca se apoya contra una ventana, con las manos en el bolsillo y la pierna derecha casualmente cruzada sobre su izquierda.",
+        "metum": "Alt",
+        "status": "Approved",
+        "author": "Lisa Meyerowitz",
+        "license": "cc0-1.0",
+        "content_type": "text/plain",
+        "language": "es",
+        "content_uri": ""
+      },
+      "links": {
+        "self": "http://coyote.data/representations/51380"
+      }
+    },
+    {
+      "type": "Representation",
+      "id": "512600",
+      "attributes": {
+        "text": "",
+        "metum": "Long",
+        "status": "Approved",
+        "author": "Meghan  Coppoletti",
+        "license": "cc0-1.0",
+        "content_type": "audio/aiff",
+        "language": "en",
+        "content_uri": "5126.en.aiff"
+      },
+      "links": {
+        "self": "http://coyote.data/representations/512600"
+      }
+    },
+    {
+      "type": "Representation",
+      "id": "513800",
+      "attributes": {
+        "text": "",
+        "metum": "Alt",
+        "status": "Approved",
+        "author": "Lisa Meyerowitz",
+        "license": "cc0-1.0",
+        "content_type": "audio/aiff",
+        "language": "en",
+        "content_uri": "5138.en.aiff"
+      },
+      "links": {
+        "self": "http://coyote.data/representations/513800"
+      }
+    },
+    {
+      "type": "Representation",
+      "id": "5126000",
+      "attributes": {
+        "text": "",
+        "metum": "Long",
+        "status": "Approved",
+        "author": "Meghan  Coppoletti",
+        "license": "cc0-1.0",
+        "content_type": "audio/aiff",
+        "language": "es",
+        "content_uri": "51260.es.aiff"
+      },
+      "links": {
+        "self": "http://coyote.data/representations/5126000"
+      }
+    },
+    {
+      "type": "Representation",
+      "id": "5138000",
+      "attributes": {
+        "text": "",
+        "metum": "Alt",
+        "status": "Approved",
+        "author": "Lisa Meyerowitz",
+        "license": "cc0-1.0",
+        "content_type": "audio/aiff",
+        "language": "es",
+        "content_uri": "51380.es.aiff"
+      },
+      "links": {
+        "self": "http://coyote.data/representations/5138000"
       }
     }
   ]

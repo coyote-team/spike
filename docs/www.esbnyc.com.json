@@ -16,25 +16,37 @@
         "self": "http://coyote.data/www.esbnyc.com.json"
       },
       "relationships": {
-        "predicates": {
-          "links": "http://coyote.data/www.esbnyc.com/relationships/predicates",
-          "related": "http://coyote.data/www.esbnyc.com/predicates",
-          "data": [
-            {
-              "type": "Predicate",
-              "id": 2
-            }
-          ]
-        },
-        "representations": {
+        "hasFormat": {
           "links": {
-            "self": "http://coyote.data/www.esbnyc.com/relationships/representations",
-            "related": "http://coyote.data/www.esbnyc.com/representations"
+            "self": "http://coyote.data/www.esbnyc.com/relationships/hasFormat",
+            "related": "http://coyote.data/www.esbnyc.com/hasFormat"
           },
           "data": [
             {
-              "type": "Representation",
-              "id": "2"
+              "id": "2",
+              "type": "Representation"
+            },
+            {
+              "id": "20",
+              "type": "Representation"
+            },
+            {
+              "id": "200",
+              "type": "Representation"
+            },
+            {
+              "id": "2000",
+              "type": "Representation"
+            }
+          ]
+        },
+        "isPartOf": {
+          "links": "http://coyote.data/www.esbnyc.com/relationships/isPartOf",
+          "related": "http://coyote.data/www.esbnyc.com/isPartOf",
+          "data": [
+            {
+              "id": "brs_0330",
+              "type": "Image"
             }
           ]
         }
@@ -60,15 +72,70 @@
       }
     },
     {
-      "type": "Predicate",
-      "id": 2,
+      "type": "Representation",
+      "id": "20",
       "attributes": {
-        "subject": "http://coyote.data/www.esbnyc.com",
-        "verb": "isPartOf",
-        "object": "http://coyote.data/brs_0330"
+        "text": "Un gran edificio columnar con muchas ventanas. Los pisos más altos son columnas más estrechas apiladas una encima de otra, en un efecto ahusado. Todo el edificio está coronado por una estructura similar a una aguja que proyecta en el aire alrededor del 25% de la altura del edificio.",
+        "metum": "Alt",
+        "status": "Approved",
+        "author": "Mike Subelsky",
+        "license": "cc0-1.0",
+        "content_type": "text/plain",
+        "language": "es",
+        "content_uri": ""
       },
       "links": {
-        "self": "http://coyote.data/predicates/2"
+        "self": "http://coyote.data/representations/20"
+      }
+    },
+    {
+      "type": "Representation",
+      "id": "200",
+      "attributes": {
+        "text": "",
+        "metum": "Alt",
+        "status": "Approved",
+        "author": "Mike Subelsky",
+        "license": "cc0-1.0",
+        "content_type": "audio/aiff",
+        "language": "en",
+        "content_uri": "2.en.aiff"
+      },
+      "links": {
+        "self": "http://coyote.data/representations/200"
+      }
+    },
+    {
+      "type": "Representation",
+      "id": "2000",
+      "attributes": {
+        "text": "",
+        "metum": "Alt",
+        "status": "Approved",
+        "author": "Mike Subelsky",
+        "license": "cc0-1.0",
+        "content_type": "audio/aiff",
+        "language": "es",
+        "content_uri": "20.es.aiff"
+      },
+      "links": {
+        "self": "http://coyote.data/representations/2000"
+      }
+    },
+    {
+      "type": "Image",
+      "id": "brs_0330",
+      "attributes": {
+        "title": "Picture of Empire State Building",
+        "type": "Image",
+        "source_uri": "http://www.esbnyc.com/sites/default/files/styles/module_image__600x338_/public/default_images/brs_0330.jpg?itok=PrpAgC4u",
+        "canonical_id": "PrpAgC4u",
+        "context": "Website",
+        "created_at": "2017-09-14",
+        "updated_at": "2017-09-14"
+      },
+      "links": {
+        "self": "http://coyote.data/brs_0330"
       }
     }
   ]
