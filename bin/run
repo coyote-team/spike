@@ -112,7 +112,7 @@ class Representation < Struct.new(:identifier,:text,:metum,:status,:author,:lice
     self.links = []
 
     if content_type == 'text/plain'
-      self.content_uri = "#{identifier}.txt"
+      self.content_uri = "#{identifier}.#{language}.txt"
     end
   end
 
@@ -326,7 +326,7 @@ def transcribe(resources)
       audio_file_name = "#{r.identifier}.#{r.language}.aiff"
 
       if r.text != ''
-        txt_path = OUTPUT_PATH.join("#{r.identifier}.txt")
+        txt_path = OUTPUT_PATH.join(r.content_uri)
         txt_path.write(r.text)
       end
 
@@ -371,4 +371,6 @@ resources.each do |r|
   r.representations.each do |p| 
     puts "\thttps://coyote-team.github.io/spike/#{p.content_uri}"
   end
+
+  puts
 end

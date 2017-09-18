@@ -103,7 +103,7 @@
         "license": "cc0-1.0",
         "content_type": "text/plain",
         "language": "en",
-        "content_uri": "5124.txt"
+        "content_uri": "5124.en.txt"
       },
       "links": {
         "self": "http://coyote.data/representations/5124"
@@ -120,7 +120,7 @@
         "license": "cc0-1.0",
         "content_type": "text/plain",
         "language": "en",
-        "content_uri": "5139.txt"
+        "content_uri": "5139.en.txt"
       },
       "links": {
         "self": "http://coyote.data/representations/5139"
@@ -137,7 +137,7 @@
         "license": "cc0-1.0",
         "content_type": "text/plain",
         "language": "zh-CN",
-        "content_uri": "51240.txt"
+        "content_uri": "51240.zh-CN.txt"
       },
       "links": {
         "self": "http://coyote.data/representations/51240"
@@ -154,7 +154,7 @@
         "license": "cc0-1.0",
         "content_type": "text/plain",
         "language": "zh-CN",
-        "content_uri": "51390.txt"
+        "content_uri": "51390.zh-CN.txt"
       },
       "links": {
         "self": "http://coyote.data/representations/51390"
@@ -171,7 +171,7 @@
         "license": "cc0-1.0",
         "content_type": "text/plain",
         "language": "zh-TW",
-        "content_uri": "51240.txt"
+        "content_uri": "51240.zh-TW.txt"
       },
       "links": {
         "self": "http://coyote.data/representations/51240"
@@ -188,7 +188,7 @@
         "license": "cc0-1.0",
         "content_type": "text/plain",
         "language": "zh-TW",
-        "content_uri": "51390.txt"
+        "content_uri": "51390.zh-TW.txt"
       },
       "links": {
         "self": "http://coyote.data/representations/51390"
@@ -205,7 +205,7 @@
         "license": "cc0-1.0",
         "content_type": "text/plain",
         "language": "zh-TW",
-        "content_uri": "512400.txt"
+        "content_uri": "512400.zh-TW.txt"
       },
       "links": {
         "self": "http://coyote.data/representations/512400"
@@ -222,7 +222,7 @@
         "license": "cc0-1.0",
         "content_type": "text/plain",
         "language": "zh-TW",
-        "content_uri": "513900.txt"
+        "content_uri": "513900.zh-TW.txt"
       },
       "links": {
         "self": "http://coyote.data/representations/513900"

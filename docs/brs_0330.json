@@ -81,7 +81,7 @@
         "license": "cc0-1.0",
         "content_type": "text/plain",
         "language": "en",
-        "content_uri": "1.txt"
+        "content_uri": "1.en.txt"
       },
       "links": {
         "self": "http://coyote.data/representations/1"
@@ -98,7 +98,7 @@
         "license": "cc0-1.0",
         "content_type": "text/plain",
         "language": "zh-CN",
-        "content_uri": "10.txt"
+        "content_uri": "10.zh-CN.txt"
       },
       "links": {
         "self": "http://coyote.data/representations/10"
@@ -115,7 +115,7 @@
         "license": "cc0-1.0",
         "content_type": "text/plain",
         "language": "zh-TW",
-        "content_uri": "10.txt"
+        "content_uri": "10.zh-TW.txt"
       },
       "links": {
         "self": "http://coyote.data/representations/10"
@@ -132,7 +132,7 @@
         "license": "cc0-1.0",
         "content_type": "text/plain",
         "language": "zh-TW",
-        "content_uri": "100.txt"
+        "content_uri": "100.zh-TW.txt"
       },
       "links": {
         "self": "http://coyote.data/representations/100"
