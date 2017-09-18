@@ -9,8 +9,8 @@
         "source_uri": "http://www.esbnyc.com/",
         "canonical_id": "http://www.esbnyc.com/",
         "context": "Place",
-        "created_at": "2017-09-14",
-        "updated_at": "2017-09-14"
+        "created_at": "2017-09-18",
+        "updated_at": "2017-09-18"
       },
       "links": {
         "self": "http://coyote.data/www.esbnyc.com.json"
@@ -31,11 +31,27 @@
               "type": "Representation"
             },
             {
+              "id": "20",
+              "type": "Representation"
+            },
+            {
+              "id": "200",
+              "type": "Representation"
+            },
+            {
               "id": "200",
               "type": "Representation"
             },
             {
               "id": "2000",
+              "type": "Representation"
+            },
+            {
+              "id": "2000",
+              "type": "Representation"
+            },
+            {
+              "id": "20000",
               "type": "Representation"
             }
           ]
@@ -65,7 +81,7 @@
         "license": "cc0-1.0",
         "content_type": "text/plain",
         "language": "en",
-        "content_uri": ""
+        "content_uri": "2.txt"
       },
       "links": {
         "self": "http://coyote.data/representations/2"
@@ -75,17 +91,51 @@
       "type": "Representation",
       "id": "20",
       "attributes": {
-        "text": "Un gran edificio columnar con muchas ventanas. Los pisos más altos son columnas más estrechas apiladas una encima de otra, en un efecto ahusado. Todo el edificio está coronado por una estructura similar a una aguja que proyecta en el aire alrededor del 25% de la altura del edificio.",
+        "text": "一个大的柱状建筑与许多窗户。最上层是彼此顶部堆叠的较窄的柱，呈锥形效应。整个建筑物都是一个针状的结构，将建筑高度的25％投入空中。",
         "metum": "Alt",
         "status": "Approved",
         "author": "Mike Subelsky",
         "license": "cc0-1.0",
         "content_type": "text/plain",
-        "language": "es",
-        "content_uri": ""
+        "language": "zh-CN",
+        "content_uri": "20.txt"
       },
       "links": {
         "self": "http://coyote.data/representations/20"
+      }
+    },
+    {
+      "type": "Representation",
+      "id": "20",
+      "attributes": {
+        "text": "一個大的柱狀建築與許多窗戶。最上層是彼此頂部堆疊的較窄的柱，呈錐形效應。整個建築物都是一個針狀的結構，將建築高度的25％投入空中。",
+        "metum": "Alt",
+        "status": "Approved",
+        "author": "Mike Subelsky",
+        "license": "cc0-1.0",
+        "content_type": "text/plain",
+        "language": "zh-TW",
+        "content_uri": "20.txt"
+      },
+      "links": {
+        "self": "http://coyote.data/representations/20"
+      }
+    },
+    {
+      "type": "Representation",
+      "id": "200",
+      "attributes": {
+        "text": "一個大的柱狀建築與許多窗戶。最上層是彼此頂部堆疊的較窄的柱，呈錐形效應。整個建築物都是一個針狀的結構，將建築高度的25％投入空中。",
+        "metum": "Alt",
+        "status": "Approved",
+        "author": "Mike Subelsky",
+        "license": "cc0-1.0",
+        "content_type": "text/plain",
+        "language": "zh-TW",
+        "content_uri": "200.txt"
+      },
+      "links": {
+        "self": "http://coyote.data/representations/200"
       }
     },
     {
@@ -115,11 +165,45 @@
         "author": "Mike Subelsky",
         "license": "cc0-1.0",
         "content_type": "audio/aiff",
-        "language": "es",
-        "content_uri": "20.es.aiff"
+        "language": "zh-CN",
+        "content_uri": "20.zh-CN.aiff"
       },
       "links": {
         "self": "http://coyote.data/representations/2000"
+      }
+    },
+    {
+      "type": "Representation",
+      "id": "2000",
+      "attributes": {
+        "text": "",
+        "metum": "Alt",
+        "status": "Approved",
+        "author": "Mike Subelsky",
+        "license": "cc0-1.0",
+        "content_type": "audio/aiff",
+        "language": "zh-TW",
+        "content_uri": "20.zh-TW.aiff"
+      },
+      "links": {
+        "self": "http://coyote.data/representations/2000"
+      }
+    },
+    {
+      "type": "Representation",
+      "id": "20000",
+      "attributes": {
+        "text": "",
+        "metum": "Alt",
+        "status": "Approved",
+        "author": "Mike Subelsky",
+        "license": "cc0-1.0",
+        "content_type": "audio/aiff",
+        "language": "zh-TW",
+        "content_uri": "200.zh-TW.aiff"
+      },
+      "links": {
+        "self": "http://coyote.data/representations/20000"
       }
     },
     {
@@ -131,8 +215,8 @@
         "source_uri": "http://www.esbnyc.com/sites/default/files/styles/module_image__600x338_/public/default_images/brs_0330.jpg?itok=PrpAgC4u",
         "canonical_id": "PrpAgC4u",
         "context": "Website",
-        "created_at": "2017-09-14",
-        "updated_at": "2017-09-14"
+        "created_at": "2017-09-18",
+        "updated_at": "2017-09-18"
       },
       "links": {
         "self": "http://coyote.data/brs_0330"

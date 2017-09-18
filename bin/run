@@ -22,11 +22,13 @@ TEXT_CONTENT_TYPE = 'text/plain'.freeze
 
 BASE_URI = Pathname('http://coyote.data')
 
-LANGUAGES = %w(es) # zh).freeze
+LANGUAGES = %w(zh-CN zh-TW).freeze
 
 VOICES = {
   "en" => 'Samantha',
-  "es" => 'Paulina'
+  "es" => 'Paulina',
+  'zh-CN' => 'Ting-Ting',
+  'zh-TW' => 'Ting-Ting'
 }
 
 # next step is make a hypermedia JSON version that has language translation and audio transcription
@@ -108,6 +110,10 @@ class Representation < Struct.new(:identifier,:text,:metum,:status,:author,:lice
     self.language = rec.fetch(:description_locale,'en')
     self.content_uri = rec.fetch(:content_uri,'')
     self.links = []
+
+    if content_type == 'text/plain'
+      self.content_uri = "#{identifier}.txt"
+    end
   end
 
   def attributes
@@ -319,6 +325,11 @@ def transcribe(resources)
     new_reps = resource.representations.map do |r|
       audio_file_name = "#{r.identifier}.#{r.language}.aiff"
 
+      if r.text != ''
+        txt_path = OUTPUT_PATH.join("#{r.identifier}.txt")
+        txt_path.write(r.text)
+      end
+
       voice = VOICES.fetch(r.language)
       command = "say -o #{OUTPUT_PATH.join(audio_file_name)} -v #{voice} '#{r.text}'"
 
@@ -343,7 +354,6 @@ def transcribe(resources)
   end
 end
 
-
 records = import().last(10)
 resources = materialize(records)
 
@@ -354,3 +364,11 @@ translate(resources)
 transcribe(resources)
 
 write_json(resources)
+
+resources.each do |r| 
+  puts "https://coyote-team.github.io/spike/#{r.identifier}.json" 
+
+  r.representations.each do |p| 
+    puts "\thttps://coyote-team.github.io/spike/#{p.content_uri}"
+  end
+end

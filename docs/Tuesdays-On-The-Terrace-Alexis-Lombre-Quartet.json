@@ -39,6 +39,22 @@
               "type": "Representation"
             },
             {
+              "id": "51350",
+              "type": "Representation"
+            },
+            {
+              "id": "51420",
+              "type": "Representation"
+            },
+            {
+              "id": "513500",
+              "type": "Representation"
+            },
+            {
+              "id": "514200",
+              "type": "Representation"
+            },
+            {
               "id": "513500",
               "type": "Representation"
             },
@@ -52,6 +68,22 @@
             },
             {
               "id": "5142000",
+              "type": "Representation"
+            },
+            {
+              "id": "5135000",
+              "type": "Representation"
+            },
+            {
+              "id": "5142000",
+              "type": "Representation"
+            },
+            {
+              "id": "51350000",
+              "type": "Representation"
+            },
+            {
+              "id": "51420000",
               "type": "Representation"
             }
           ]
@@ -71,7 +103,7 @@
         "license": "cc0-1.0",
         "content_type": "text/plain",
         "language": "en",
-        "content_uri": ""
+        "content_uri": "5135.txt"
       },
       "links": {
         "self": "http://coyote.data/representations/5135"
@@ -88,7 +120,7 @@
         "license": "cc0-1.0",
         "content_type": "text/plain",
         "language": "en",
-        "content_uri": ""
+        "content_uri": "5142.txt"
       },
       "links": {
         "self": "http://coyote.data/representations/5142"
@@ -98,14 +130,14 @@
       "type": "Representation",
       "id": "51350",
       "attributes": {
-        "text": "Una mujer se sienta en un banco delante de un piano en un club tenuemente iluminado con las cortinas oscuras. Su brazo derecho descansa en su regazo y su mano izquierda arañazos la parte superior de su cabeza. Ella inclina la cabeza hacia la izquierda y sonríe. Fotografías de otros músicos cubren las paredes traseras.",
+        "text": "一个女人坐在一个坐在黑色窗帘的昏暗的俱乐部的一架钢琴前面的长凳上。她的右臂躺在膝盖上，左手抓住了头顶。她向左倾斜，微笑。其他音乐家的照片覆盖了后墙。",
         "metum": "Long",
         "status": "Approved",
         "author": "Meghan  Coppoletti",
         "license": "cc0-1.0",
         "content_type": "text/plain",
-        "language": "es",
-        "content_uri": ""
+        "language": "zh-CN",
+        "content_uri": "51350.txt"
       },
       "links": {
         "self": "http://coyote.data/representations/51350"
@@ -115,17 +147,85 @@
       "type": "Representation",
       "id": "51420",
       "attributes": {
-        "text": "Una mujer se sienta en un piano en un club tenuemente iluminado. Ella inclina la cabeza hacia la izquierda y sonríe.",
+        "text": "一个女人坐在一个昏暗的俱乐部的钢琴上。她向左倾斜，微笑。",
         "metum": "Alt",
         "status": "Approved",
         "author": "Lisa Meyerowitz",
         "license": "cc0-1.0",
         "content_type": "text/plain",
-        "language": "es",
-        "content_uri": ""
+        "language": "zh-CN",
+        "content_uri": "51420.txt"
       },
       "links": {
         "self": "http://coyote.data/representations/51420"
+      }
+    },
+    {
+      "type": "Representation",
+      "id": "51350",
+      "attributes": {
+        "text": "一個女人坐在一個坐在黑色窗簾的昏暗的俱樂部的一架鋼琴前面的長凳上。她的右臂躺在膝蓋上，左手抓住了頭頂。她向左傾斜，微笑。其他音樂家的照片覆蓋了後牆。",
+        "metum": "Long",
+        "status": "Approved",
+        "author": "Meghan  Coppoletti",
+        "license": "cc0-1.0",
+        "content_type": "text/plain",
+        "language": "zh-TW",
+        "content_uri": "51350.txt"
+      },
+      "links": {
+        "self": "http://coyote.data/representations/51350"
+      }
+    },
+    {
+      "type": "Representation",
+      "id": "51420",
+      "attributes": {
+        "text": "一個女人坐在一個昏暗的俱樂部的鋼琴上。她向左傾斜，微笑。",
+        "metum": "Alt",
+        "status": "Approved",
+        "author": "Lisa Meyerowitz",
+        "license": "cc0-1.0",
+        "content_type": "text/plain",
+        "language": "zh-TW",
+        "content_uri": "51420.txt"
+      },
+      "links": {
+        "self": "http://coyote.data/representations/51420"
+      }
+    },
+    {
+      "type": "Representation",
+      "id": "513500",
+      "attributes": {
+        "text": "一個女人坐在一個坐在黑色窗簾的昏暗的俱樂部的一架鋼琴前面的長凳上。她的右臂躺在膝蓋上，左手抓住了頭頂。她向左傾斜，微笑。其他音樂家的照片覆蓋了後牆。",
+        "metum": "Long",
+        "status": "Approved",
+        "author": "Meghan  Coppoletti",
+        "license": "cc0-1.0",
+        "content_type": "text/plain",
+        "language": "zh-TW",
+        "content_uri": "513500.txt"
+      },
+      "links": {
+        "self": "http://coyote.data/representations/513500"
+      }
+    },
+    {
+      "type": "Representation",
+      "id": "514200",
+      "attributes": {
+        "text": "一個女人坐在一個昏暗的俱樂部的鋼琴上。她向左傾斜，微笑。",
+        "metum": "Alt",
+        "status": "Approved",
+        "author": "Lisa Meyerowitz",
+        "license": "cc0-1.0",
+        "content_type": "text/plain",
+        "language": "zh-TW",
+        "content_uri": "514200.txt"
+      },
+      "links": {
+        "self": "http://coyote.data/representations/514200"
       }
     },
     {
@@ -172,8 +272,8 @@
         "author": "Meghan  Coppoletti",
         "license": "cc0-1.0",
         "content_type": "audio/aiff",
-        "language": "es",
-        "content_uri": "51350.es.aiff"
+        "language": "zh-CN",
+        "content_uri": "51350.zh-CN.aiff"
       },
       "links": {
         "self": "http://coyote.data/representations/5135000"
@@ -189,11 +289,79 @@
         "author": "Lisa Meyerowitz",
         "license": "cc0-1.0",
         "content_type": "audio/aiff",
-        "language": "es",
-        "content_uri": "51420.es.aiff"
+        "language": "zh-CN",
+        "content_uri": "51420.zh-CN.aiff"
       },
       "links": {
         "self": "http://coyote.data/representations/5142000"
+      }
+    },
+    {
+      "type": "Representation",
+      "id": "5135000",
+      "attributes": {
+        "text": "",
+        "metum": "Long",
+        "status": "Approved",
+        "author": "Meghan  Coppoletti",
+        "license": "cc0-1.0",
+        "content_type": "audio/aiff",
+        "language": "zh-TW",
+        "content_uri": "51350.zh-TW.aiff"
+      },
+      "links": {
+        "self": "http://coyote.data/representations/5135000"
+      }
+    },
+    {
+      "type": "Representation",
+      "id": "5142000",
+      "attributes": {
+        "text": "",
+        "metum": "Alt",
+        "status": "Approved",
+        "author": "Lisa Meyerowitz",
+        "license": "cc0-1.0",
+        "content_type": "audio/aiff",
+        "language": "zh-TW",
+        "content_uri": "51420.zh-TW.aiff"
+      },
+      "links": {
+        "self": "http://coyote.data/representations/5142000"
+      }
+    },
+    {
+      "type": "Representation",
+      "id": "51350000",
+      "attributes": {
+        "text": "",
+        "metum": "Long",
+        "status": "Approved",
+        "author": "Meghan  Coppoletti",
+        "license": "cc0-1.0",
+        "content_type": "audio/aiff",
+        "language": "zh-TW",
+        "content_uri": "513500.zh-TW.aiff"
+      },
+      "links": {
+        "self": "http://coyote.data/representations/51350000"
+      }
+    },
+    {
+      "type": "Representation",
+      "id": "51420000",
+      "attributes": {
+        "text": "",
+        "metum": "Alt",
+        "status": "Approved",
+        "author": "Lisa Meyerowitz",
+        "license": "cc0-1.0",
+        "content_type": "audio/aiff",
+        "language": "zh-TW",
+        "content_uri": "514200.zh-TW.aiff"
+      },
+      "links": {
+        "self": "http://coyote.data/representations/51420000"
       }
     }
   ]

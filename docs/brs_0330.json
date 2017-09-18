@@ -9,8 +9,8 @@
         "source_uri": "http://www.esbnyc.com/sites/default/files/styles/module_image__600x338_/public/default_images/brs_0330.jpg?itok=PrpAgC4u",
         "canonical_id": "PrpAgC4u",
         "context": "Website",
-        "created_at": "2017-09-14",
-        "updated_at": "2017-09-14"
+        "created_at": "2017-09-18",
+        "updated_at": "2017-09-18"
       },
       "links": {
         "self": "http://coyote.data/brs_0330.json"
@@ -31,11 +31,27 @@
               "type": "Representation"
             },
             {
+              "id": "10",
+              "type": "Representation"
+            },
+            {
+              "id": "100",
+              "type": "Representation"
+            },
+            {
               "id": "100",
               "type": "Representation"
             },
             {
               "id": "1000",
+              "type": "Representation"
+            },
+            {
+              "id": "1000",
+              "type": "Representation"
+            },
+            {
+              "id": "10000",
               "type": "Representation"
             }
           ]
@@ -65,7 +81,7 @@
         "license": "cc0-1.0",
         "content_type": "text/plain",
         "language": "en",
-        "content_uri": ""
+        "content_uri": "1.txt"
       },
       "links": {
         "self": "http://coyote.data/representations/1"
@@ -75,17 +91,51 @@
       "type": "Representation",
       "id": "10",
       "attributes": {
-        "text": "Un edificio alto con los pisos superiores encendidos contra un fondo del crepúsculo. El cielo es azul profundo, pero el horizonte sigue siendo naranja oscuro, como si el sol acabara de ponerse.",
+        "text": "一栋高层建筑，高层建筑与黄昏背景相媲美。天空深蓝，但地平线仍然是深橙色，好像太阳刚刚起伏。",
         "metum": "Alt",
         "status": "Approved",
         "author": "Mike Subelsky",
         "license": "cc0-1.0",
         "content_type": "text/plain",
-        "language": "es",
-        "content_uri": ""
+        "language": "zh-CN",
+        "content_uri": "10.txt"
       },
       "links": {
         "self": "http://coyote.data/representations/10"
+      }
+    },
+    {
+      "type": "Representation",
+      "id": "10",
+      "attributes": {
+        "text": "一棟高層建築，高層建築與黃昏背景相媲美。天空深藍，但地平線仍然是深橙色，好像太陽剛剛起伏。",
+        "metum": "Alt",
+        "status": "Approved",
+        "author": "Mike Subelsky",
+        "license": "cc0-1.0",
+        "content_type": "text/plain",
+        "language": "zh-TW",
+        "content_uri": "10.txt"
+      },
+      "links": {
+        "self": "http://coyote.data/representations/10"
+      }
+    },
+    {
+      "type": "Representation",
+      "id": "100",
+      "attributes": {
+        "text": "一棟高層建築，高層建築與黃昏背景相媲美。天空深藍，但地平線仍然是深橙色，好像太陽剛剛起伏。",
+        "metum": "Alt",
+        "status": "Approved",
+        "author": "Mike Subelsky",
+        "license": "cc0-1.0",
+        "content_type": "text/plain",
+        "language": "zh-TW",
+        "content_uri": "100.txt"
+      },
+      "links": {
+        "self": "http://coyote.data/representations/100"
       }
     },
     {
@@ -115,11 +165,45 @@
         "author": "Mike Subelsky",
         "license": "cc0-1.0",
         "content_type": "audio/aiff",
-        "language": "es",
-        "content_uri": "10.es.aiff"
+        "language": "zh-CN",
+        "content_uri": "10.zh-CN.aiff"
       },
       "links": {
         "self": "http://coyote.data/representations/1000"
+      }
+    },
+    {
+      "type": "Representation",
+      "id": "1000",
+      "attributes": {
+        "text": "",
+        "metum": "Alt",
+        "status": "Approved",
+        "author": "Mike Subelsky",
+        "license": "cc0-1.0",
+        "content_type": "audio/aiff",
+        "language": "zh-TW",
+        "content_uri": "10.zh-TW.aiff"
+      },
+      "links": {
+        "self": "http://coyote.data/representations/1000"
+      }
+    },
+    {
+      "type": "Representation",
+      "id": "10000",
+      "attributes": {
+        "text": "",
+        "metum": "Alt",
+        "status": "Approved",
+        "author": "Mike Subelsky",
+        "license": "cc0-1.0",
+        "content_type": "audio/aiff",
+        "language": "zh-TW",
+        "content_uri": "100.zh-TW.aiff"
+      },
+      "links": {
+        "self": "http://coyote.data/representations/10000"
       }
     },
     {
@@ -131,8 +215,8 @@
         "source_uri": "http://www.esbnyc.com/",
         "canonical_id": "http://www.esbnyc.com/",
         "context": "Place",
-        "created_at": "2017-09-14",
-        "updated_at": "2017-09-14"
+        "created_at": "2017-09-18",
+        "updated_at": "2017-09-18"
       },
       "links": {
         "self": "http://coyote.data/www.esbnyc.com"

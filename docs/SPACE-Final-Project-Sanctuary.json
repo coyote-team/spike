@@ -39,6 +39,22 @@
               "type": "Representation"
             },
             {
+              "id": "51320",
+              "type": "Representation"
+            },
+            {
+              "id": "51400",
+              "type": "Representation"
+            },
+            {
+              "id": "513200",
+              "type": "Representation"
+            },
+            {
+              "id": "514000",
+              "type": "Representation"
+            },
+            {
               "id": "513200",
               "type": "Representation"
             },
@@ -52,6 +68,22 @@
             },
             {
               "id": "5140000",
+              "type": "Representation"
+            },
+            {
+              "id": "5132000",
+              "type": "Representation"
+            },
+            {
+              "id": "5140000",
+              "type": "Representation"
+            },
+            {
+              "id": "51320000",
+              "type": "Representation"
+            },
+            {
+              "id": "51400000",
               "type": "Representation"
             }
           ]
@@ -71,7 +103,7 @@
         "license": "cc0-1.0",
         "content_type": "text/plain",
         "language": "en",
-        "content_uri": ""
+        "content_uri": "5132.txt"
       },
       "links": {
         "self": "http://coyote.data/representations/5132"
@@ -88,7 +120,7 @@
         "license": "cc0-1.0",
         "content_type": "text/plain",
         "language": "en",
-        "content_uri": ""
+        "content_uri": "5140.txt"
       },
       "links": {
         "self": "http://coyote.data/representations/5140"
@@ -98,14 +130,14 @@
       "type": "Representation",
       "id": "51320",
       "attributes": {
-        "text": "Un grupo de estudiantes de secundaria en pie en varias configuraciones fuera en un lote vacío. Un joven con gafas y una chaqueta apunta hacia la distancia con su brazo derecho completamente extendido. El fondo está escasamente poblado de árboles desnudos, farolas, líneas eléctricas y edificios comerciales.",
+        "text": "一群高中毕业生在一个空地上站在各种配置之外。一个戴着眼镜和夹克的年轻人指着他的右臂伸出远处。背景是赤裸裸的树木，路灯，电力线和商业建筑的人口稀少。",
         "metum": "Long",
         "status": "Approved",
         "author": "Meghan  Coppoletti",
         "license": "cc0-1.0",
         "content_type": "text/plain",
-        "language": "es",
-        "content_uri": ""
+        "language": "zh-CN",
+        "content_uri": "51320.txt"
       },
       "links": {
         "self": "http://coyote.data/representations/51320"
@@ -115,17 +147,85 @@
       "type": "Representation",
       "id": "51400",
       "attributes": {
-        "text": "Un grupo de personas de pie alrededor de un lote vacío en un día gris y frío. Una figura en el centro apunta hacia la izquierda y varias personas miran en esa dirección.",
+        "text": "一群人在寒冷​​的灰日里站在空荡荡的地方。中心的一个数字指向左边，有几个人朝这个方向前进。",
         "metum": "Alt",
         "status": "Approved",
         "author": "Lisa Meyerowitz",
         "license": "cc0-1.0",
         "content_type": "text/plain",
-        "language": "es",
-        "content_uri": ""
+        "language": "zh-CN",
+        "content_uri": "51400.txt"
       },
       "links": {
         "self": "http://coyote.data/representations/51400"
+      }
+    },
+    {
+      "type": "Representation",
+      "id": "51320",
+      "attributes": {
+        "text": "一群高中畢業生在一個空地上站在各種配置之外。一個戴著眼鏡和夾克的年輕人指著他的右臂伸出遠處。背景是赤裸裸的樹木，路燈，電力線和商業建築的人口稀少。",
+        "metum": "Long",
+        "status": "Approved",
+        "author": "Meghan  Coppoletti",
+        "license": "cc0-1.0",
+        "content_type": "text/plain",
+        "language": "zh-TW",
+        "content_uri": "51320.txt"
+      },
+      "links": {
+        "self": "http://coyote.data/representations/51320"
+      }
+    },
+    {
+      "type": "Representation",
+      "id": "51400",
+      "attributes": {
+        "text": "一群人在寒冷​​的灰日里站在空蕩蕩的地方。中心的一個數字指向左邊，有幾個人朝這個方向前進。",
+        "metum": "Alt",
+        "status": "Approved",
+        "author": "Lisa Meyerowitz",
+        "license": "cc0-1.0",
+        "content_type": "text/plain",
+        "language": "zh-TW",
+        "content_uri": "51400.txt"
+      },
+      "links": {
+        "self": "http://coyote.data/representations/51400"
+      }
+    },
+    {
+      "type": "Representation",
+      "id": "513200",
+      "attributes": {
+        "text": "一群高中畢業生在一個空地上站在各種配置之外。一個戴著眼鏡和夾克的年輕人指著他的右臂伸出遠處。背景是赤裸裸的樹木，路燈，電力線和商業建築的人口稀少。",
+        "metum": "Long",
+        "status": "Approved",
+        "author": "Meghan  Coppoletti",
+        "license": "cc0-1.0",
+        "content_type": "text/plain",
+        "language": "zh-TW",
+        "content_uri": "513200.txt"
+      },
+      "links": {
+        "self": "http://coyote.data/representations/513200"
+      }
+    },
+    {
+      "type": "Representation",
+      "id": "514000",
+      "attributes": {
+        "text": "一群人在寒冷​​​​的灰日里站在空蕩蕩的地方。中心的一個數字指向左邊，有幾個人朝這個方向前進。",
+        "metum": "Alt",
+        "status": "Approved",
+        "author": "Lisa Meyerowitz",
+        "license": "cc0-1.0",
+        "content_type": "text/plain",
+        "language": "zh-TW",
+        "content_uri": "514000.txt"
+      },
+      "links": {
+        "self": "http://coyote.data/representations/514000"
       }
     },
     {
@@ -172,8 +272,8 @@
         "author": "Meghan  Coppoletti",
         "license": "cc0-1.0",
         "content_type": "audio/aiff",
-        "language": "es",
-        "content_uri": "51320.es.aiff"
+        "language": "zh-CN",
+        "content_uri": "51320.zh-CN.aiff"
       },
       "links": {
         "self": "http://coyote.data/representations/5132000"
@@ -189,11 +289,79 @@
         "author": "Lisa Meyerowitz",
         "license": "cc0-1.0",
         "content_type": "audio/aiff",
-        "language": "es",
-        "content_uri": "51400.es.aiff"
+        "language": "zh-CN",
+        "content_uri": "51400.zh-CN.aiff"
       },
       "links": {
         "self": "http://coyote.data/representations/5140000"
+      }
+    },
+    {
+      "type": "Representation",
+      "id": "5132000",
+      "attributes": {
+        "text": "",
+        "metum": "Long",
+        "status": "Approved",
+        "author": "Meghan  Coppoletti",
+        "license": "cc0-1.0",
+        "content_type": "audio/aiff",
+        "language": "zh-TW",
+        "content_uri": "51320.zh-TW.aiff"
+      },
+      "links": {
+        "self": "http://coyote.data/representations/5132000"
+      }
+    },
+    {
+      "type": "Representation",
+      "id": "5140000",
+      "attributes": {
+        "text": "",
+        "metum": "Alt",
+        "status": "Approved",
+        "author": "Lisa Meyerowitz",
+        "license": "cc0-1.0",
+        "content_type": "audio/aiff",
+        "language": "zh-TW",
+        "content_uri": "51400.zh-TW.aiff"
+      },
+      "links": {
+        "self": "http://coyote.data/representations/5140000"
+      }
+    },
+    {
+      "type": "Representation",
+      "id": "51320000",
+      "attributes": {
+        "text": "",
+        "metum": "Long",
+        "status": "Approved",
+        "author": "Meghan  Coppoletti",
+        "license": "cc0-1.0",
+        "content_type": "audio/aiff",
+        "language": "zh-TW",
+        "content_uri": "513200.zh-TW.aiff"
+      },
+      "links": {
+        "self": "http://coyote.data/representations/51320000"
+      }
+    },
+    {
+      "type": "Representation",
+      "id": "51400000",
+      "attributes": {
+        "text": "",
+        "metum": "Alt",
+        "status": "Approved",
+        "author": "Lisa Meyerowitz",
+        "license": "cc0-1.0",
+        "content_type": "audio/aiff",
+        "language": "zh-TW",
+        "content_uri": "514000.zh-TW.aiff"
+      },
+      "links": {
+        "self": "http://coyote.data/representations/51400000"
       }
     }
   ]

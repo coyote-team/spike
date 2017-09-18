@@ -39,6 +39,22 @@
               "type": "Representation"
             },
             {
+              "id": "51240",
+              "type": "Representation"
+            },
+            {
+              "id": "51390",
+              "type": "Representation"
+            },
+            {
+              "id": "512400",
+              "type": "Representation"
+            },
+            {
+              "id": "513900",
+              "type": "Representation"
+            },
+            {
               "id": "512400",
               "type": "Representation"
             },
@@ -52,6 +68,22 @@
             },
             {
               "id": "5139000",
+              "type": "Representation"
+            },
+            {
+              "id": "5124000",
+              "type": "Representation"
+            },
+            {
+              "id": "5139000",
+              "type": "Representation"
+            },
+            {
+              "id": "51240000",
+              "type": "Representation"
+            },
+            {
+              "id": "51390000",
               "type": "Representation"
             }
           ]
@@ -71,7 +103,7 @@
         "license": "cc0-1.0",
         "content_type": "text/plain",
         "language": "en",
-        "content_uri": ""
+        "content_uri": "5124.txt"
       },
       "links": {
         "self": "http://coyote.data/representations/5124"
@@ -88,7 +120,7 @@
         "license": "cc0-1.0",
         "content_type": "text/plain",
         "language": "en",
-        "content_uri": ""
+        "content_uri": "5139.txt"
       },
       "links": {
         "self": "http://coyote.data/representations/5139"
@@ -98,14 +130,14 @@
       "type": "Representation",
       "id": "51240",
       "attributes": {
-        "text": "Un tiro de cuerpo medio del curador jefe Michael Darling. Se pone de pie, posado, en un ligero ángulo, y mira directamente a la cámara. Lleva una camisa de vestir blanca, una corbata a cuadros azul y blanca y una chaqueta azul texturizada.",
+        "text": "首席策展人迈克尔·达令（Michael Darling）的中场射门。他站立起来，以一点微小的角度，直接盯着相机。他穿着一件白色的衬衫，一件蓝色和白色的格纹的领带，还有一件质感的蓝色西装外套。",
         "metum": "Long",
         "status": "Approved",
         "author": "Meghan  Coppoletti",
         "license": "cc0-1.0",
         "content_type": "text/plain",
-        "language": "es",
-        "content_uri": ""
+        "language": "zh-CN",
+        "content_uri": "51240.txt"
       },
       "links": {
         "self": "http://coyote.data/representations/51240"
@@ -115,17 +147,85 @@
       "type": "Representation",
       "id": "51390",
       "attributes": {
-        "text": "Un hombre de piel clara que lleva una chaqueta de traje azul, camisa blanca y un lazo a cuadros azul y blanco mira directamente al espectador.",
+        "text": "穿着蓝色西装夹克，白色衬衫和蓝白色格纹的领带的轻皮男子直接看着观众。",
         "metum": "Alt",
         "status": "Approved",
         "author": "Lisa Meyerowitz",
         "license": "cc0-1.0",
         "content_type": "text/plain",
-        "language": "es",
-        "content_uri": ""
+        "language": "zh-CN",
+        "content_uri": "51390.txt"
       },
       "links": {
         "self": "http://coyote.data/representations/51390"
+      }
+    },
+    {
+      "type": "Representation",
+      "id": "51240",
+      "attributes": {
+        "text": "首席策展人邁克爾·達令（Michael Darling）的中場射門。他站立起來，以一點微小的角度，直接盯著相機。他穿著一件白色的襯衫，一件藍色和白色的格紋的領帶，以及一件紋理的藍色西裝外套。",
+        "metum": "Long",
+        "status": "Approved",
+        "author": "Meghan  Coppoletti",
+        "license": "cc0-1.0",
+        "content_type": "text/plain",
+        "language": "zh-TW",
+        "content_uri": "51240.txt"
+      },
+      "links": {
+        "self": "http://coyote.data/representations/51240"
+      }
+    },
+    {
+      "type": "Representation",
+      "id": "51390",
+      "attributes": {
+        "text": "穿著藍色西裝夾克，白色襯衫和藍白色格紋的領帶的輕皮男子直接看著觀眾。",
+        "metum": "Alt",
+        "status": "Approved",
+        "author": "Lisa Meyerowitz",
+        "license": "cc0-1.0",
+        "content_type": "text/plain",
+        "language": "zh-TW",
+        "content_uri": "51390.txt"
+      },
+      "links": {
+        "self": "http://coyote.data/representations/51390"
+      }
+    },
+    {
+      "type": "Representation",
+      "id": "512400",
+      "attributes": {
+        "text": "首席策展人邁克爾·達令（Michael Darling）的中場射門。他站立起來，以一點微小的角度，直接盯著相機。他穿著一件白色的襯衫，一件藍色和白色的格紋的領帶，還有一件質感的藍色西裝外套。",
+        "metum": "Long",
+        "status": "Approved",
+        "author": "Meghan  Coppoletti",
+        "license": "cc0-1.0",
+        "content_type": "text/plain",
+        "language": "zh-TW",
+        "content_uri": "512400.txt"
+      },
+      "links": {
+        "self": "http://coyote.data/representations/512400"
+      }
+    },
+    {
+      "type": "Representation",
+      "id": "513900",
+      "attributes": {
+        "text": "穿著藍色西裝夾克，白色襯衫和藍白色格紋的領帶的輕皮男子直接看著觀眾。",
+        "metum": "Alt",
+        "status": "Approved",
+        "author": "Lisa Meyerowitz",
+        "license": "cc0-1.0",
+        "content_type": "text/plain",
+        "language": "zh-TW",
+        "content_uri": "513900.txt"
+      },
+      "links": {
+        "self": "http://coyote.data/representations/513900"
       }
     },
     {
@@ -172,8 +272,8 @@
         "author": "Meghan  Coppoletti",
         "license": "cc0-1.0",
         "content_type": "audio/aiff",
-        "language": "es",
-        "content_uri": "51240.es.aiff"
+        "language": "zh-CN",
+        "content_uri": "51240.zh-CN.aiff"
       },
       "links": {
         "self": "http://coyote.data/representations/5124000"
@@ -189,11 +289,79 @@
         "author": "Lisa Meyerowitz",
         "license": "cc0-1.0",
         "content_type": "audio/aiff",
-        "language": "es",
-        "content_uri": "51390.es.aiff"
+        "language": "zh-CN",
+        "content_uri": "51390.zh-CN.aiff"
       },
       "links": {
         "self": "http://coyote.data/representations/5139000"
+      }
+    },
+    {
+      "type": "Representation",
+      "id": "5124000",
+      "attributes": {
+        "text": "",
+        "metum": "Long",
+        "status": "Approved",
+        "author": "Meghan  Coppoletti",
+        "license": "cc0-1.0",
+        "content_type": "audio/aiff",
+        "language": "zh-TW",
+        "content_uri": "51240.zh-TW.aiff"
+      },
+      "links": {
+        "self": "http://coyote.data/representations/5124000"
+      }
+    },
+    {
+      "type": "Representation",
+      "id": "5139000",
+      "attributes": {
+        "text": "",
+        "metum": "Alt",
+        "status": "Approved",
+        "author": "Lisa Meyerowitz",
+        "license": "cc0-1.0",
+        "content_type": "audio/aiff",
+        "language": "zh-TW",
+        "content_uri": "51390.zh-TW.aiff"
+      },
+      "links": {
+        "self": "http://coyote.data/representations/5139000"
+      }
+    },
+    {
+      "type": "Representation",
+      "id": "51240000",
+      "attributes": {
+        "text": "",
+        "metum": "Long",
+        "status": "Approved",
+        "author": "Meghan  Coppoletti",
+        "license": "cc0-1.0",
+        "content_type": "audio/aiff",
+        "language": "zh-TW",
+        "content_uri": "512400.zh-TW.aiff"
+      },
+      "links": {
+        "self": "http://coyote.data/representations/51240000"
+      }
+    },
+    {
+      "type": "Representation",
+      "id": "51390000",
+      "attributes": {
+        "text": "",
+        "metum": "Alt",
+        "status": "Approved",
+        "author": "Lisa Meyerowitz",
+        "license": "cc0-1.0",
+        "content_type": "audio/aiff",
+        "language": "zh-TW",
+        "content_uri": "513900.zh-TW.aiff"
+      },
+      "links": {
+        "self": "http://coyote.data/representations/51390000"
       }
     }
   ]

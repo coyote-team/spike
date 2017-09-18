@@ -39,6 +39,22 @@
               "type": "Representation"
             },
             {
+              "id": "51260",
+              "type": "Representation"
+            },
+            {
+              "id": "51380",
+              "type": "Representation"
+            },
+            {
+              "id": "512600",
+              "type": "Representation"
+            },
+            {
+              "id": "513800",
+              "type": "Representation"
+            },
+            {
               "id": "512600",
               "type": "Representation"
             },
@@ -52,6 +68,22 @@
             },
             {
               "id": "5138000",
+              "type": "Representation"
+            },
+            {
+              "id": "5126000",
+              "type": "Representation"
+            },
+            {
+              "id": "5138000",
+              "type": "Representation"
+            },
+            {
+              "id": "51260000",
+              "type": "Representation"
+            },
+            {
+              "id": "51380000",
               "type": "Representation"
             }
           ]
@@ -71,7 +103,7 @@
         "license": "cc0-1.0",
         "content_type": "text/plain",
         "language": "en",
-        "content_uri": ""
+        "content_uri": "5126.txt"
       },
       "links": {
         "self": "http://coyote.data/representations/5126"
@@ -88,7 +120,7 @@
         "license": "cc0-1.0",
         "content_type": "text/plain",
         "language": "en",
-        "content_uri": ""
+        "content_uri": "5138.txt"
       },
       "links": {
         "self": "http://coyote.data/representations/5138"
@@ -98,14 +130,14 @@
       "type": "Representation",
       "id": "51260",
       "attributes": {
-        "text": "Una fotografía de cuerpo completo de un curador de MCA masculino. Se apoya contra una ventana, con las manos en el bolsillo y la pierna derecha casualmente cruzada sobre su izquierda. Lleva una camisa de vestir blanca con un azul marino, chaqueta de vestir y pantalones ajustados. Lleva gafas gruesas y enmarcadas y mira fijamente sin expresión a la cámara.",
+        "text": "男性MCA策展人的全身照片。他靠在窗前，双手放在口袋里，右腿随意地越过左边。他穿着一件白色的衬衫，配上一件海军蓝色的衣服夹克和裤子。他穿着厚实的黑色眼镜，并在相机上凝视着无表情。",
         "metum": "Long",
         "status": "Approved",
         "author": "Meghan  Coppoletti",
         "license": "cc0-1.0",
         "content_type": "text/plain",
-        "language": "es",
-        "content_uri": ""
+        "language": "zh-CN",
+        "content_uri": "51260.txt"
       },
       "links": {
         "self": "http://coyote.data/representations/51260"
@@ -115,17 +147,85 @@
       "type": "Representation",
       "id": "51380",
       "attributes": {
-        "text": "Un hombre vestido con un traje azul crujiente y camisa blanca se apoya contra una ventana, con las manos en el bolsillo y la pierna derecha casualmente cruzada sobre su izquierda.",
+        "text": "一个穿着清新的蓝色西装和白色衬衫的男人倾斜在窗前，双手放在口袋里，右脚随意地越过了他的左边。",
         "metum": "Alt",
         "status": "Approved",
         "author": "Lisa Meyerowitz",
         "license": "cc0-1.0",
         "content_type": "text/plain",
-        "language": "es",
-        "content_uri": ""
+        "language": "zh-CN",
+        "content_uri": "51380.txt"
       },
       "links": {
         "self": "http://coyote.data/representations/51380"
+      }
+    },
+    {
+      "type": "Representation",
+      "id": "51260",
+      "attributes": {
+        "text": "男性MCA策展人的全身照片。他靠在窗前，雙手放在口袋裡，右腿隨意地越過左邊。他穿著一件白色的襯衫，配上一件海軍藍色的衣服夾克和褲子。他穿著厚實的黑色眼鏡，並在相機上凝視著無表情。",
+        "metum": "Long",
+        "status": "Approved",
+        "author": "Meghan  Coppoletti",
+        "license": "cc0-1.0",
+        "content_type": "text/plain",
+        "language": "zh-TW",
+        "content_uri": "51260.txt"
+      },
+      "links": {
+        "self": "http://coyote.data/representations/51260"
+      }
+    },
+    {
+      "type": "Representation",
+      "id": "51380",
+      "attributes": {
+        "text": "一個穿著清新的藍色西裝和白色襯衫的男人傾斜在窗前，雙手放在口袋裡，右腳隨意地越過了他的左邊。",
+        "metum": "Alt",
+        "status": "Approved",
+        "author": "Lisa Meyerowitz",
+        "license": "cc0-1.0",
+        "content_type": "text/plain",
+        "language": "zh-TW",
+        "content_uri": "51380.txt"
+      },
+      "links": {
+        "self": "http://coyote.data/representations/51380"
+      }
+    },
+    {
+      "type": "Representation",
+      "id": "512600",
+      "attributes": {
+        "text": "男性MCA策展人的全身照片。他靠在窗前，雙手放在口袋裡，右腿隨意地越過左邊。他穿著一件白色的襯衫，配上一件海軍藍色的衣服夾克和褲子。他穿著厚實的黑色眼鏡，並在相機上凝視著無表情。",
+        "metum": "Long",
+        "status": "Approved",
+        "author": "Meghan  Coppoletti",
+        "license": "cc0-1.0",
+        "content_type": "text/plain",
+        "language": "zh-TW",
+        "content_uri": "512600.txt"
+      },
+      "links": {
+        "self": "http://coyote.data/representations/512600"
+      }
+    },
+    {
+      "type": "Representation",
+      "id": "513800",
+      "attributes": {
+        "text": "一個穿著清新的藍色西裝和白色襯衫的男人傾斜在窗前，雙手放在口袋裡，右腳隨意地越過了他的左邊。",
+        "metum": "Alt",
+        "status": "Approved",
+        "author": "Lisa Meyerowitz",
+        "license": "cc0-1.0",
+        "content_type": "text/plain",
+        "language": "zh-TW",
+        "content_uri": "513800.txt"
+      },
+      "links": {
+        "self": "http://coyote.data/representations/513800"
       }
     },
     {
@@ -172,8 +272,8 @@
         "author": "Meghan  Coppoletti",
         "license": "cc0-1.0",
         "content_type": "audio/aiff",
-        "language": "es",
-        "content_uri": "51260.es.aiff"
+        "language": "zh-CN",
+        "content_uri": "51260.zh-CN.aiff"
       },
       "links": {
         "self": "http://coyote.data/representations/5126000"
@@ -189,11 +289,79 @@
         "author": "Lisa Meyerowitz",
         "license": "cc0-1.0",
         "content_type": "audio/aiff",
-        "language": "es",
-        "content_uri": "51380.es.aiff"
+        "language": "zh-CN",
+        "content_uri": "51380.zh-CN.aiff"
       },
       "links": {
         "self": "http://coyote.data/representations/5138000"
+      }
+    },
+    {
+      "type": "Representation",
+      "id": "5126000",
+      "attributes": {
+        "text": "",
+        "metum": "Long",
+        "status": "Approved",
+        "author": "Meghan  Coppoletti",
+        "license": "cc0-1.0",
+        "content_type": "audio/aiff",
+        "language": "zh-TW",
+        "content_uri": "51260.zh-TW.aiff"
+      },
+      "links": {
+        "self": "http://coyote.data/representations/5126000"
+      }
+    },
+    {
+      "type": "Representation",
+      "id": "5138000",
+      "attributes": {
+        "text": "",
+        "metum": "Alt",
+        "status": "Approved",
+        "author": "Lisa Meyerowitz",
+        "license": "cc0-1.0",
+        "content_type": "audio/aiff",
+        "language": "zh-TW",
+        "content_uri": "51380.zh-TW.aiff"
+      },
+      "links": {
+        "self": "http://coyote.data/representations/5138000"
+      }
+    },
+    {
+      "type": "Representation",
+      "id": "51260000",
+      "attributes": {
+        "text": "",
+        "metum": "Long",
+        "status": "Approved",
+        "author": "Meghan  Coppoletti",
+        "license": "cc0-1.0",
+        "content_type": "audio/aiff",
+        "language": "zh-TW",
+        "content_uri": "512600.zh-TW.aiff"
+      },
+      "links": {
+        "self": "http://coyote.data/representations/51260000"
+      }
+    },
+    {
+      "type": "Representation",
+      "id": "51380000",
+      "attributes": {
+        "text": "",
+        "metum": "Alt",
+        "status": "Approved",
+        "author": "Lisa Meyerowitz",
+        "license": "cc0-1.0",
+        "content_type": "audio/aiff",
+        "language": "zh-TW",
+        "content_uri": "513800.zh-TW.aiff"
+      },
+      "links": {
+        "self": "http://coyote.data/representations/51380000"
       }
     }
   ]

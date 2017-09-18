@@ -39,6 +39,22 @@
               "type": "Representation"
             },
             {
+              "id": "49480",
+              "type": "Representation"
+            },
+            {
+              "id": "49470",
+              "type": "Representation"
+            },
+            {
+              "id": "494800",
+              "type": "Representation"
+            },
+            {
+              "id": "494700",
+              "type": "Representation"
+            },
+            {
               "id": "494800",
               "type": "Representation"
             },
@@ -52,6 +68,22 @@
             },
             {
               "id": "4947000",
+              "type": "Representation"
+            },
+            {
+              "id": "4948000",
+              "type": "Representation"
+            },
+            {
+              "id": "4947000",
+              "type": "Representation"
+            },
+            {
+              "id": "49480000",
+              "type": "Representation"
+            },
+            {
+              "id": "49470000",
               "type": "Representation"
             }
           ]
@@ -71,7 +103,7 @@
         "license": "cc0-1.0",
         "content_type": "text/plain",
         "language": "en",
-        "content_uri": ""
+        "content_uri": "4948.txt"
       },
       "links": {
         "self": "http://coyote.data/representations/4948"
@@ -88,7 +120,7 @@
         "license": "cc0-1.0",
         "content_type": "text/plain",
         "language": "en",
-        "content_uri": ""
+        "content_uri": "4947.txt"
       },
       "links": {
         "self": "http://coyote.data/representations/4947"
@@ -98,14 +130,14 @@
       "type": "Representation",
       "id": "49480",
       "attributes": {
-        "text": "Tres hombres y una mujer se colocan en una playa en un día asoleado que usa parkas pesados.",
+        "text": "三男一女在阳光灿烂的一天穿着重型公园，站在沙滩上。",
         "metum": "Alt",
         "status": "Approved",
         "author": "Matti Allison (hotmail)",
         "license": "cc0-1.0",
         "content_type": "text/plain",
-        "language": "es",
-        "content_uri": ""
+        "language": "zh-CN",
+        "content_uri": "49480.txt"
       },
       "links": {
         "self": "http://coyote.data/representations/49480"
@@ -115,17 +147,85 @@
       "type": "Representation",
       "id": "49470",
       "attributes": {
-        "text": "Cuatro personas están de pie en una playa. La luz fuerte de detrás de las figuras está proyectando sombras largas antes de ellas en la arena. Detrás de la gente de pie, la playa arenosa termina en una línea de cepillo y hierba de la playa cerca de dos tercios del camino hasta nuestro campo de visión. El cielo es de color azul pálido en contraste con las personas que se visten principalmente con ropa oscura. Las personas casualmente vestidas de piel clara (tres hombres y una mujer) llevan equipo de invierno, lo que sugiere que a pesar de la ubicación de la playa la temperatura es fría.",
+        "text": "四个人站在海滩上。数字后面的强光在他们面前投下了长长的阴影。在站立的人后面，沙滩终止于我们的视野三分之二的刷子和沙滩草地上。与大部分穿黑色衣服的人相比，天空是淡蓝色的。随身穿的公平皮肤的人（三男一女）穿着冬季装备，表明尽管海滩位置温度很冷。",
         "metum": "Long",
         "status": "Approved",
         "author": "Matti Allison (hotmail)",
         "license": "cc0-1.0",
         "content_type": "text/plain",
-        "language": "es",
-        "content_uri": ""
+        "language": "zh-CN",
+        "content_uri": "49470.txt"
       },
       "links": {
         "self": "http://coyote.data/representations/49470"
+      }
+    },
+    {
+      "type": "Representation",
+      "id": "49480",
+      "attributes": {
+        "text": "三男一女在陽光燦爛的一天穿著重型公園，站在沙灘上。",
+        "metum": "Alt",
+        "status": "Approved",
+        "author": "Matti Allison (hotmail)",
+        "license": "cc0-1.0",
+        "content_type": "text/plain",
+        "language": "zh-TW",
+        "content_uri": "49480.txt"
+      },
+      "links": {
+        "self": "http://coyote.data/representations/49480"
+      }
+    },
+    {
+      "type": "Representation",
+      "id": "49470",
+      "attributes": {
+        "text": "四個人站在海灘上。數字後面的強光在他們面前投下了長長的陰影。在站立的人後面，沙灘終止於我們的視野三分之二的刷子和沙灘草地上。與大部分穿黑色衣服的人相比，天空是淡藍色的。隨身穿的公平皮膚的人（三男一女）穿著冬季裝備，表明儘管海灘位置溫度很冷。",
+        "metum": "Long",
+        "status": "Approved",
+        "author": "Matti Allison (hotmail)",
+        "license": "cc0-1.0",
+        "content_type": "text/plain",
+        "language": "zh-TW",
+        "content_uri": "49470.txt"
+      },
+      "links": {
+        "self": "http://coyote.data/representations/49470"
+      }
+    },
+    {
+      "type": "Representation",
+      "id": "494800",
+      "attributes": {
+        "text": "三男一女在陽光燦爛的一天穿著重型公園，站在沙灘上。",
+        "metum": "Alt",
+        "status": "Approved",
+        "author": "Matti Allison (hotmail)",
+        "license": "cc0-1.0",
+        "content_type": "text/plain",
+        "language": "zh-TW",
+        "content_uri": "494800.txt"
+      },
+      "links": {
+        "self": "http://coyote.data/representations/494800"
+      }
+    },
+    {
+      "type": "Representation",
+      "id": "494700",
+      "attributes": {
+        "text": "四個人站在海灘上。數字後面的強光在他們面前投下了長長的陰影。在站立的人後面，沙灘終止於我們的視野三分之二的刷子和沙灘草地上。與大部分穿黑色衣服的人相比，天空是淡藍色的。隨身穿的公平皮膚的人（三男一女）穿著冬季裝備，表明儘管海灘位置溫度很冷。",
+        "metum": "Long",
+        "status": "Approved",
+        "author": "Matti Allison (hotmail)",
+        "license": "cc0-1.0",
+        "content_type": "text/plain",
+        "language": "zh-TW",
+        "content_uri": "494700.txt"
+      },
+      "links": {
+        "self": "http://coyote.data/representations/494700"
       }
     },
     {
@@ -172,8 +272,8 @@
         "author": "Matti Allison (hotmail)",
         "license": "cc0-1.0",
         "content_type": "audio/aiff",
-        "language": "es",
-        "content_uri": "49480.es.aiff"
+        "language": "zh-CN",
+        "content_uri": "49480.zh-CN.aiff"
       },
       "links": {
         "self": "http://coyote.data/representations/4948000"
@@ -189,11 +289,79 @@
         "author": "Matti Allison (hotmail)",
         "license": "cc0-1.0",
         "content_type": "audio/aiff",
-        "language": "es",
-        "content_uri": "49470.es.aiff"
+        "language": "zh-CN",
+        "content_uri": "49470.zh-CN.aiff"
       },
       "links": {
         "self": "http://coyote.data/representations/4947000"
+      }
+    },
+    {
+      "type": "Representation",
+      "id": "4948000",
+      "attributes": {
+        "text": "",
+        "metum": "Alt",
+        "status": "Approved",
+        "author": "Matti Allison (hotmail)",
+        "license": "cc0-1.0",
+        "content_type": "audio/aiff",
+        "language": "zh-TW",
+        "content_uri": "49480.zh-TW.aiff"
+      },
+      "links": {
+        "self": "http://coyote.data/representations/4948000"
+      }
+    },
+    {
+      "type": "Representation",
+      "id": "4947000",
+      "attributes": {
+        "text": "",
+        "metum": "Long",
+        "status": "Approved",
+        "author": "Matti Allison (hotmail)",
+        "license": "cc0-1.0",
+        "content_type": "audio/aiff",
+        "language": "zh-TW",
+        "content_uri": "49470.zh-TW.aiff"
+      },
+      "links": {
+        "self": "http://coyote.data/representations/4947000"
+      }
+    },
+    {
+      "type": "Representation",
+      "id": "49480000",
+      "attributes": {
+        "text": "",
+        "metum": "Alt",
+        "status": "Approved",
+        "author": "Matti Allison (hotmail)",
+        "license": "cc0-1.0",
+        "content_type": "audio/aiff",
+        "language": "zh-TW",
+        "content_uri": "494800.zh-TW.aiff"
+      },
+      "links": {
+        "self": "http://coyote.data/representations/49480000"
+      }
+    },
+    {
+      "type": "Representation",
+      "id": "49470000",
+      "attributes": {
+        "text": "",
+        "metum": "Long",
+        "status": "Approved",
+        "author": "Matti Allison (hotmail)",
+        "license": "cc0-1.0",
+        "content_type": "audio/aiff",
+        "language": "zh-TW",
+        "content_uri": "494700.zh-TW.aiff"
+      },
+      "links": {
+        "self": "http://coyote.data/representations/49470000"
       }
     }
   ]
